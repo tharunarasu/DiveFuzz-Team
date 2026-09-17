@@ -883,20 +883,9 @@ def generate_instructions(
                                     frd_history,
                                     frs_history,
                                 )
-                                # Clean up vector instruction fields: remove the trailing comma if the last field is 0;
-                                # or eliminate consecutive commas (,,) caused by missing operands.
-                                if extension == "RV_V":
-                                    # First round of filtering
-                                    if complete_instr.endswith(", "):
-                                        complete_instr = complete_instr[:-2]
-                                    # Second round of filtering
-                                    if complete_instr.endswith(", "):
-                                        complete_instr = complete_instr[:-2]
-                                    # Replace two consecutive commas (possibly with space in between) in the string
-                                    while ", ," in complete_instr:
-                                        complete_instr = complete_instr.replace(
-                                            ", ,", ","
-                                        )
+                                # NOTE: vector vm/nf fields that substitute to an
+                                # empty string are normalized inside
+                                # generate_new_instr(), so every call site is covered.
 
                             # Instruction is valid, exit retry loop
                             break

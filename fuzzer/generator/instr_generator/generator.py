@@ -116,13 +116,29 @@ def generate_random_v_instruction():
     ]
     rs1 = random.choice(source_register_aliases)
 
-    # Randomize SEW (Standard Element Width)
-    sew_options = [8, 16, 32, 64]  # Supported SEW values
-    sew = random.choice(sew_options)
-
-    # Randomize LMUL (Vector Register Group Multiplier)
-    lmul_options = ["m1", "m2", "m4", "mf2", "mf4"]  # Supported LMUL values
-    lmul = random.choice(lmul_options)
+    # Randomize LMUL (Vector Register Group Multiplier) and SEW (Element Width).
+    #
+    # Two hardware constraints must hold, or the seed loses all vector coverage:
+    #
+    # 1. SEW / LMUL <= ELEN (64 on the RV64 cores under test). Violating it makes
+    #    vsetvli set vtype.vill, after which EVERY vector instruction in the seed
+    #    raises an illegal instruction - one bad draw wipes out the whole seed.
+    # 2. LMUL > 1 requires vector register numbers to be multiples of LMUL.
+    #    Operands are drawn uniformly from v1-v31, so m2/m4/m8 would make most
+    #    vector instructions illegal encodings. LMUL <= 1 has no such constraint.
+    #
+    # Those configurations are still exercised: vsetvli/vsetvl/vsetivli are part
+    # of the RV_V table and get emitted inline like any other instruction, so
+    # vill and wider register groups are reached during the run rather than being
+    # forced on the seed up front.
+    lmul_to_sew = {
+        "m1": [8, 16, 32, 64],
+        "mf2": [8, 16, 32],
+        "mf4": [8, 16],
+        "mf8": [8],
+    }
+    lmul = random.choice(list(lmul_to_sew))
+    sew = random.choice(lmul_to_sew[lmul])
 
     # Randomize TA (Tail Agnostic)
     ta_options = ["ta", "tu"]  # Tail Agnostic or Tail Undisturbed
@@ -301,6 +317,14 @@ def generate_new_instr(new_instr_op, extension, rd_history, rs_history,\
     for var, replacement in new_parts.items():
         new_instr = new_instr.replace("{" + var + "}", replacement)
 
+    # Optional operands can substitute to an empty string - the vector vm field
+    # is either 'v0.t' or absent, and nf is always absent - which leaves dangling
+    # or doubled separators such as "vsuxei16.v v28, (t0), v20, , ".
+    # Normalize them away so the emitted line is always valid assembly.
+    if ", ," in new_instr or new_instr.rstrip().endswith(","):
+        while ", ," in new_instr:
+            new_instr = new_instr.replace(", ,", ",")
+        new_instr = new_instr.rstrip().rstrip(",").rstrip()
 
 
 # FOR CVA6 TEST

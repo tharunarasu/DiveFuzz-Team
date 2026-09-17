@@ -28,6 +28,18 @@ ISA_PROFILES = {
         "rv{bits}gc_zicsr_zifencei_zba_zbb_zbc_zbs_zbkb_zbkc_zbkx_zkne_zknd_zknh",
         "rv{bits}g_zicsr_zifencei_zba_zbb_zbc_zbs_zbkb_zbkc_zbkx_zkne_zknd_zknh",
     ),
+    # Profiles that enable the V (vector) extension.
+    # The 'v' must be present in the ISA string: it is handed to Spike via
+    # SpikeSession, and without it every vector instruction traps as an illegal
+    # instruction in the reference model (verified: mcause=2 on vsetvli).
+    "general": (
+        "rv{bits}gcv_zicsr_zifencei_zfh_zba_zbb_zbkc_zbc_zbkb_zbs_zmmul_zknh_zkne_zknd_zbkx_zfa",
+        "rv{bits}gv_zicsr_zifencei_zfh_zba_zbb_zbkc_zbc_zbkb_zbs_zmmul_zknh_zkne_zknd_zbkx_zfa",
+    ),
+    "xiangshan": (
+        "rv{bits}gcv_zicsr_zifencei_zfh_zba_zbb_zbkc_zbc_zbkb_zbs_zmmul_zknh_zkne_zknd_zbkx_zfa",
+        "rv{bits}gv_zicsr_zifencei_zfh_zba_zbb_zbkc_zbc_zbkb_zbs_zmmul_zknh_zkne_zknd_zbkx_zfa",
+    ),
     # Default profile with all extensions including zfh
     "default": (
         "rv{bits}gc_zicsr_zifencei_zfh_zba_zbb_zbkc_zbc_zbkb_zbs_zmmul_zknh_zkne_zknd_zbkx_zfa",

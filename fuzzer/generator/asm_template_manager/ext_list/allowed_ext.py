@@ -206,8 +206,8 @@ ALLOWED_EXT_XIANGSHAN = [
     # "RV_ZBKX",        # Crossbar permutation for crypto (xperm4, xperm8) - DISABLED: Spike lacks Zbkx
     # "RV_ZK",          # NIST Suite crypto (AES, SHA) - DISABLED: Spike lacks Zkne/Zknd
     # "RV64_ZK",        # RV64 crypto (AES64*, SHA512*) - DISABLED: Spike lacks Zkne/Zknd
-    # "RV_V",           # Vector extension - supported by XiangShan; enable once the
-    #                   # reference model is built with V (see ALLOWED_EXT_COMPARE)
+    "RV_V",           # Vector extension (RVV 1.0) - XiangShan implements it;
+                      # the "xiangshan" ISA profile carries 'v' so Spike matches
     # Note: Half-precision FP (Zfh/Zfa) supported but not yet in formats.py
 ]
 
