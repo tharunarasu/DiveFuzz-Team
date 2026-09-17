@@ -29,7 +29,7 @@ from ...instr_generator import (
     special_instr,
     rv32_not_support_instr,
     rv32_not_support_csrs,
-    # generate_random_vsetvli_instruction,
+    generate_random_v_instruction,
     get_instruction_format,
     generate_new_instr,
     reg_range,
@@ -413,7 +413,8 @@ def generate_instructions(
             v_ext_enable = False
 
         if v_ext_enable:
-            # v_instr_init
+            # Configure vl/vtype before any vector instruction executes
+            v_instr_init = generate_random_v_instruction()
             entire_instrs.append(v_instr_init)
 
         # Maximum bytes in NOP template's main region

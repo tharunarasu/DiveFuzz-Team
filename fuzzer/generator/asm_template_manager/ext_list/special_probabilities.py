@@ -89,7 +89,7 @@ SPECIAL_PROB_GENERAL = {
     'RV_ZBKB': 0.17,\
     'rv_32B':0.05,\
     'RV_ZBKX': 0.02,\
-    # 'RV_V': 0.3
+    'RV_V': 0.3
     # 'ILL':0.8
 }
 SPECIAL_PROB_BASE = {

@@ -2685,6 +2685,4006 @@ INSTRUCTION_FORMATS = {
             "category": "SYSTEM"
         }
     },
+    "RV_V": {
+        "vaadd.vv": {
+            "format": "vaadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vaadd.vx": {
+            "format": "vaadd.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vaaddu.vv": {
+            "format": "vaaddu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vaaddu.vx": {
+            "format": "vaaddu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadc.vim": {
+            "format": "vadc.vim {VD}, {VS2}, {IMM_5}, v0",
+            "variables": [
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadc.vvm": {
+            "format": "vadc.vvm {VD}, {VS1}, {VS2}, v0",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadc.vxm": {
+            "format": "vadc.vxm {VD}, {VS2}, {RS1}, v0",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadd.vi": {
+            "format": "vadd.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadd.vv": {
+            "format": "vadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vadd.vx": {
+            "format": "vadd.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vand.vi": {
+            "format": "vand.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vand.vv": {
+            "format": "vand.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vand.vx": {
+            "format": "vand.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vasub.vv": {
+            "format": "vasub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vasub.vx": {
+            "format": "vasub.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vasubu.vv": {
+            "format": "vasubu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vasubu.vx": {
+            "format": "vasubu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vcompress.vm": {
+            "format": "vcompress.vm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vcpop.m": {
+            "format": "vcpop.m {RD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vdiv.vv": {
+            "format": "vdiv.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vdiv.vx": {
+            "format": "vdiv.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vdivu.vv": {
+            "format": "vdivu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vdivu.vx": {
+            "format": "vdivu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfadd.vf": {
+            "format": "vfadd.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfadd.vv": {
+            "format": "vfadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfclass.v": {
+            "format": "vfclass.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.f.x.v": {
+            "format": "vfcvt.f.x.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.f.xu.v": {
+            "format": "vfcvt.f.xu.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.rtz.x.f.v": {
+            "format": "vfcvt.rtz.x.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.rtz.xu.f.v": {
+            "format": "vfcvt.rtz.xu.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.x.f.v": {
+            "format": "vfcvt.x.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfcvt.xu.f.v": {
+            "format": "vfcvt.xu.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfdiv.vf": {
+            "format": "vfdiv.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfdiv.vv": {
+            "format": "vfdiv.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfirst.m": {
+            "format": "vfirst.m {RD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmacc.vf": {
+            "format": "vfmacc.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmacc.vv": {
+            "format": "vfmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmadd.vf": {
+            "format": "vfmadd.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmadd.vv": {
+            "format": "vfmadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmax.vf": {
+            "format": "vfmax.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmax.vv": {
+            "format": "vfmax.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmerge.vfm": {
+            "format": "vfmerge.vfm {VD}, {VS2}, {FRS1}, v0",
+            "variables": [
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmin.vf": {
+            "format": "vfmin.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmin.vv": {
+            "format": "vfmin.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmsac.vf": {
+            "format": "vfmsac.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmsac.vv": {
+            "format": "vfmsac.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmsub.vf": {
+            "format": "vfmsub.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmsub.vv": {
+            "format": "vfmsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmul.vf": {
+            "format": "vfmul.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmul.vv": {
+            "format": "vfmul.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmv.f.s": {
+            "format": "vfmv.f.s {FRD}, {VS2}",
+            "variables": [
+                "VS2",
+                "FRD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmv.s.f": {
+            "format": "vfmv.s.f {VD}, {FRS1}",
+            "variables": [
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfmv.v.f": {
+            "format": "vfmv.v.f {VD}, {FRS1}",
+            "variables": [
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.f.f.w": {
+            "format": "vfncvt.f.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.f.x.w": {
+            "format": "vfncvt.f.x.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.f.xu.w": {
+            "format": "vfncvt.f.xu.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.rod.f.f.w": {
+            "format": "vfncvt.rod.f.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.rtz.x.f.w": {
+            "format": "vfncvt.rtz.x.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.rtz.xu.f.w": {
+            "format": "vfncvt.rtz.xu.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.x.f.w": {
+            "format": "vfncvt.x.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfncvt.xu.f.w": {
+            "format": "vfncvt.xu.f.w {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmacc.vf": {
+            "format": "vfnmacc.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmacc.vv": {
+            "format": "vfnmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmadd.vf": {
+            "format": "vfnmadd.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmadd.vv": {
+            "format": "vfnmadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmsac.vf": {
+            "format": "vfnmsac.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmsac.vv": {
+            "format": "vfnmsac.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmsub.vf": {
+            "format": "vfnmsub.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfnmsub.vv": {
+            "format": "vfnmsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfrdiv.vf": {
+            "format": "vfrdiv.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfrec7.v": {
+            "format": "vfrec7.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfredmax.vs": {
+            "format": "vfredmax.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfredmin.vs": {
+            "format": "vfredmin.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfredosum.vs": {
+            "format": "vfredosum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfredusum.vs": {
+            "format": "vfredusum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfrsqrt7.v": {
+            "format": "vfrsqrt7.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfrsub.vf": {
+            "format": "vfrsub.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnj.vf": {
+            "format": "vfsgnj.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnj.vv": {
+            "format": "vfsgnj.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnjn.vf": {
+            "format": "vfsgnjn.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnjn.vv": {
+            "format": "vfsgnjn.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnjx.vf": {
+            "format": "vfsgnjx.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsgnjx.vv": {
+            "format": "vfsgnjx.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfslide1down.vf": {
+            "format": "vfslide1down.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfslide1up.vf": {
+            "format": "vfslide1up.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsqrt.v": {
+            "format": "vfsqrt.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsub.vf": {
+            "format": "vfsub.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfsub.vv": {
+            "format": "vfsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwadd.vf": {
+            "format": "vfwadd.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwadd.vv": {
+            "format": "vfwadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwadd.wf": {
+            "format": "vfwadd.wf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwadd.wv": {
+            "format": "vfwadd.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.f.f.v": {
+            "format": "vfwcvt.f.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.f.x.v": {
+            "format": "vfwcvt.f.x.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.f.xu.v": {
+            "format": "vfwcvt.f.xu.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.rtz.x.f.v": {
+            "format": "vfwcvt.rtz.x.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.rtz.xu.f.v": {
+            "format": "vfwcvt.rtz.xu.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.x.f.v": {
+            "format": "vfwcvt.x.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwcvt.xu.f.v": {
+            "format": "vfwcvt.xu.f.v {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmacc.vf": {
+            "format": "vfwmacc.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmacc.vv": {
+            "format": "vfwmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmsac.vf": {
+            "format": "vfwmsac.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmsac.vv": {
+            "format": "vfwmsac.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmul.vf": {
+            "format": "vfwmul.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwmul.vv": {
+            "format": "vfwmul.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwnmacc.vf": {
+            "format": "vfwnmacc.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwnmacc.vv": {
+            "format": "vfwnmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwnmsac.vf": {
+            "format": "vfwnmsac.vf {VD}, {FRS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "FRS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwnmsac.vv": {
+            "format": "vfwnmsac.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwredosum.vs": {
+            "format": "vfwredosum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwredusum.vs": {
+            "format": "vfwredusum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwsub.vf": {
+            "format": "vfwsub.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwsub.vv": {
+            "format": "vfwsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwsub.wf": {
+            "format": "vfwsub.wf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vfwsub.wv": {
+            "format": "vfwsub.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vid.v": {
+            "format": "vid.v {VD}, {VM}",
+            "variables": [
+                "VM",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "viota.m": {
+            "format": "viota.m {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl1re16.v": {
+            "format": "vl1re16.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl1re32.v": {
+            "format": "vl1re32.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl1re64.v": {
+            "format": "vl1re64.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl1re8.v": {
+            "format": "vl1re8.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl2re16.v": {
+            "format": "vl2re16.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl2re32.v": {
+            "format": "vl2re32.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl2re64.v": {
+            "format": "vl2re64.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl2re8.v": {
+            "format": "vl2re8.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl4re16.v": {
+            "format": "vl4re16.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl4re32.v": {
+            "format": "vl4re32.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl4re64.v": {
+            "format": "vl4re64.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl4re8.v": {
+            "format": "vl4re8.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl8re16.v": {
+            "format": "vl8re16.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl8re32.v": {
+            "format": "vl8re32.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl8re64.v": {
+            "format": "vl8re64.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vl8re8.v": {
+            "format": "vl8re8.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle16.v": {
+            "format": "vle16.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle16ff.v": {
+            "format": "vle16ff.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle32.v": {
+            "format": "vle32.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle32ff.v": {
+            "format": "vle32ff.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle64.v": {
+            "format": "vle64.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle64ff.v": {
+            "format": "vle64ff.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle8.v": {
+            "format": "vle8.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vle8ff.v": {
+            "format": "vle8ff.v {VD}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vlm.v": {
+            "format": "vlm.v {VD}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vloxei16.v": {
+            "format": "vloxei16.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vloxei32.v": {
+            "format": "vloxei32.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vloxei64.v": {
+            "format": "vloxei64.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vloxei8.v": {
+            "format": "vloxei8.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vlse16.v": {
+            "format": "vlse16.v {VD}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vlse32.v": {
+            "format": "vlse32.v {VD}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vlse64.v": {
+            "format": "vlse64.v {VD}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vlse8.v": {
+            "format": "vlse8.v {VD}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vluxei16.v": {
+            "format": "vluxei16.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vluxei32.v": {
+            "format": "vluxei32.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vluxei64.v": {
+            "format": "vluxei64.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vluxei8.v": {
+            "format": "vluxei8.v {VD}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmacc.vv": {
+            "format": "vmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmacc.vx": {
+            "format": "vmacc.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vi": {
+            "format": "vmadc.vi {VD}, {VS2}, {IMM_5} ",
+            "variables": [
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vim": {
+            "format": "vmadc.vim {VD}, {VS2}, {IMM_5}, v0",
+            "variables": [
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vv": {
+            "format": "vmadc.vv {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vvm": {
+            "format": "vmadc.vvm {VD}, {VS1}, {VS2}, v0",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vx": {
+            "format": "vmadc.vx {VD}, {VS2}, {RS1}",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadc.vxm": {
+            "format": "vmadc.vxm {VD}, {VS2}, {RS1}, v0",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadd.vv": {
+            "format": "vmadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmadd.vx": {
+            "format": "vmadd.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmand.mm": {
+            "format": "vmand.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmandn.mm": {
+            "format": "vmandn.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmax.vv": {
+            "format": "vmax.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmax.vx": {
+            "format": "vmax.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmaxu.vv": {
+            "format": "vmaxu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmaxu.vx": {
+            "format": "vmaxu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmerge.vim": {
+            "format": "vmerge.vim {VD}, {VS2}, {IMM_5}, v0",
+            "variables": [
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmerge.vvm": {
+            "format": "vmerge.vvm {VD}, {VS1}, {VS2}, v0",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmerge.vxm": {
+            "format": "vmerge.vxm {VD}, {VS2}, {RS1}, v0",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfeq.vf": {
+            "format": "vmfeq.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfeq.vv": {
+            "format": "vmfeq.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfge.vf": {
+            "format": "vmfge.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfgt.vf": {
+            "format": "vmfgt.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfle.vf": {
+            "format": "vmfle.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfle.vv": {
+            "format": "vmfle.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmflt.vf": {
+            "format": "vmflt.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmflt.vv": {
+            "format": "vmflt.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfne.vf": {
+            "format": "vmfne.vf {VD}, {VS2}, {FRS1}, {VM}",
+            "variables": [
+                "VM",
+                "FRS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmfne.vv": {
+            "format": "vmfne.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmin.vv": {
+            "format": "vmin.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmin.vx": {
+            "format": "vmin.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vminu.vv": {
+            "format": "vminu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vminu.vx": {
+            "format": "vminu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmnand.mm": {
+            "format": "vmnand.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmnor.mm": {
+            "format": "vmnor.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmor.mm": {
+            "format": "vmor.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmorn.mm": {
+            "format": "vmorn.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsbc.vv": {
+            "format": "vmsbc.vv {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsbc.vvm": {
+            "format": "vmsbc.vvm {VD}, {VS1}, {VS2}, v0",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsbc.vx": {
+            "format": "vmsbc.vx {VD}, {VS2}, {RS1}",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsbc.vxm": {
+            "format": "vmsbc.vxm {VD}, {VS2}, {RS1}, v0",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsbf.m": {
+            "format": "vmsbf.m {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmseq.vi": {
+            "format": "vmseq.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmseq.vv": {
+            "format": "vmseq.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmseq.vx": {
+            "format": "vmseq.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsgt.vi": {
+            "format": "vmsgt.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsgt.vx": {
+            "format": "vmsgt.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsgtu.vi": {
+            "format": "vmsgtu.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsgtu.vx": {
+            "format": "vmsgtu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsif.m": {
+            "format": "vmsif.m {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsle.vi": {
+            "format": "vmsle.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsle.vv": {
+            "format": "vmsle.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsle.vx": {
+            "format": "vmsle.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsleu.vi": {
+            "format": "vmsleu.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "IMM_5",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsleu.vv": {
+            "format": "vmsleu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsleu.vx": {
+            "format": "vmsleu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmslt.vv": {
+            "format": "vmslt.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmslt.vx": {
+            "format": "vmslt.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsltu.vv": {
+            "format": "vmsltu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsltu.vx": {
+            "format": "vmsltu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsne.vi": {
+            "format": "vmsne.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsne.vv": {
+            "format": "vmsne.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsne.vx": {
+            "format": "vmsne.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmsof.m": {
+            "format": "vmsof.m {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmul.vv": {
+            "format": "vmul.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmul.vx": {
+            "format": "vmul.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulh.vv": {
+            "format": "vmulh.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulh.vx": {
+            "format": "vmulh.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulhsu.vv": {
+            "format": "vmulhsu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulhsu.vx": {
+            "format": "vmulhsu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulhu.vv": {
+            "format": "vmulhu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmulhu.vx": {
+            "format": "vmulhu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv1r.v": {
+            "format": "vmv1r.v {VD}, {VS2}",
+            "variables": [
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv2r.v": {
+            "format": "vmv2r.v {VD}, {VS2}",
+            "variables": [
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv4r.v": {
+            "format": "vmv4r.v {VD}, {VS2}",
+            "variables": [
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv8r.v": {
+            "format": "vmv8r.v {VD}, {VS2}",
+            "variables": [
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv.s.x": {
+            "format": "vmv.s.x {VD}, {RS1}",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv.v.i": {
+            "format": "vmv.v.i {VD}, {IMM_5}",
+            "variables": [
+                "IMM_5",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv.v.v": {
+            "format": "vmv.v.v {VD}, {VS1}",
+            "variables": [
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv.v.x": {
+            "format": "vmv.v.x {VD}, {RS1}",
+            "variables": [
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmv.x.s": {
+            "format": "vmv.x.s {RD}, {VS2}",
+            "variables": [
+                "VS2",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vmxnor.mm": {
+            "format": "vmxnor.mm {VD}, {VS1}, {VS2}",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vmxor.mm": {
+            "format": "vmxor.mm {VD}, {VS1}, v0",
+            "variables": [
+                "VM",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclip.wi": {
+            "format": "vnclip.wi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclip.wv": {
+            "format": "vnclip.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclip.wx": {
+            "format": "vnclip.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclipu.wi": {
+            "format": "vnclipu.wi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclipu.wv": {
+            "format": "vnclipu.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnclipu.wx": {
+            "format": "vnclipu.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnmsac.vv": {
+            "format": "vnmsac.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnmsac.vx": {
+            "format": "vnmsac.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnmsub.vv": {
+            "format": "vnmsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnmsub.vx": {
+            "format": "vnmsub.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsra.wi": {
+            "format": "vnsra.wi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsra.wv": {
+            "format": "vnsra.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsra.wx": {
+            "format": "vnsra.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsrl.wi": {
+            "format": "vnsrl.wi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsrl.wv": {
+            "format": "vnsrl.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vnsrl.wx": {
+            "format": "vnsrl.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vor.vi": {
+            "format": "vor.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vor.vv": {
+            "format": "vor.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vor.vx": {
+            "format": "vor.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredand.vs": {
+            "format": "vredand.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredmax.vs": {
+            "format": "vredmax.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredmaxu.vs": {
+            "format": "vredmaxu.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredmin.vs": {
+            "format": "vredmin.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredminu.vs": {
+            "format": "vredminu.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredor.vs": {
+            "format": "vredor.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredsum.vs": {
+            "format": "vredsum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vredxor.vs": {
+            "format": "vredxor.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrem.vv": {
+            "format": "vrem.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrem.vx": {
+            "format": "vrem.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vremu.vv": {
+            "format": "vremu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vremu.vx": {
+            "format": "vremu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrgather.vi": {
+            "format": "vrgather.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrgather.vv": {
+            "format": "vrgather.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrgather.vx": {
+            "format": "vrgather.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrgatherei16.vv": {
+            "format": "vrgatherei16.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrsub.vi": {
+            "format": "vrsub.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vrsub.vx": {
+            "format": "vrsub.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vs1r.v": {
+            "format": "vs1r.v {VS3}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vs2r.v": {
+            "format": "vs2r.v {VS3}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vs4r.v": {
+            "format": "vs4r.v {VS3}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vs8r.v": {
+            "format": "vs8r.v {VS3}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsadd.vi": {
+            "format": "vsadd.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsadd.vv": {
+            "format": "vsadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsadd.vx": {
+            "format": "vsadd.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsaddu.vi": {
+            "format": "vsaddu.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsaddu.vv": {
+            "format": "vsaddu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsaddu.vx": {
+            "format": "vsaddu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsbc.vvm": {
+            "format": "vsbc.vvm {VD}, {VS1}, {VS2}, v0",
+            "variables": [
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsbc.vxm": {
+            "format": "vsbc.vxm {VD}, {VS2}, {RS1}, v0",
+            "variables": [
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vse16.v": {
+            "format": "vse16.v {VS3}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vse32.v": {
+            "format": "vse32.v {VS3}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vse64.v": {
+            "format": "vse64.v {VS3}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vse8.v": {
+            "format": "vse8.v {VS3}, ({RS1}), {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsetivli": {
+            "format": "vsetivli {RD}, {ZIMM_5}, {ZIMM_10}",
+            "variables": [
+                "ZIMM_10",
+                "ZIMM_5",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vsetvl": {
+            "format": "vsetvl {RD}, {RS1}, {RS2}",
+            "variables": [
+                "RS2",
+                "RS1",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vsetvli": {
+            "format": "vsetvli {RD}, {RS1}, {ZIMM_11}",
+            "variables": [
+                "ZIMM_11",
+                "RS1",
+                "RD"
+            ],
+            "category": "v_ext"
+        },
+        "vsext.vf2": {
+            "format": "vsext.vf2 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsext.vf4": {
+            "format": "vsext.vf4 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsext.vf8": {
+            "format": "vsext.vf8 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslide1down.vx": {
+            "format": "vslide1down.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslide1up.vx": {
+            "format": "vslide1up.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslidedown.vi": {
+            "format": "vslidedown.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslidedown.vx": {
+            "format": "vslidedown.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslideup.vi": {
+            "format": "vslideup.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "UIMM_5",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vslideup.vx": {
+            "format": "vslideup.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsll.vi": {
+            "format": "vsll.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsll.vv": {
+            "format": "vsll.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsll.vx": {
+            "format": "vsll.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsm.v": {
+            "format": "vsm.v {VS3}, ({RS1})",
+            "variables": [
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsmul.vv": {
+            "format": "vsmul.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsmul.vx": {
+            "format": "vsmul.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsoxei16.v": {
+            "format": "vsoxei16.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsoxei32.v": {
+            "format": "vsoxei32.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsoxei64.v": {
+            "format": "vsoxei64.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsoxei8.v": {
+            "format": "vsoxei8.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsra.vi": {
+            "format": "vsra.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsra.vv": {
+            "format": "vsra.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsra.vx": {
+            "format": "vsra.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsrl.vi": {
+            "format": "vsrl.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsrl.vv": {
+            "format": "vsrl.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsrl.vx": {
+            "format": "vsrl.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsse16.v": {
+            "format": "vsse16.v {VS3}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsse32.v": {
+            "format": "vsse32.v {VS3}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsse64.v": {
+            "format": "vsse64.v {VS3}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsse8.v": {
+            "format": "vsse8.v {VS3}, ({RS1}), {RS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "RS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vssra.vi": {
+            "format": "vssra.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "UIMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssra.vv": {
+            "format": "vssra.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssra.vx": {
+            "format": "vssra.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssrl.vi": {
+            "format": "vssrl.vi {VD}, {VS2}, {UIMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "UIMM_5",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssrl.vv": {
+            "format": "vssrl.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssrl.vx": {
+            "format": "vssrl.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssub.vv": {
+            "format": "vssub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssub.vx": {
+            "format": "vssub.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssubu.vv": {
+            "format": "vssubu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vssubu.vx": {
+            "format": "vssubu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsub.vv": {
+            "format": "vsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsub.vx": {
+            "format": "vsub.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vsuxei16.v": {
+            "format": "vsuxei16.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsuxei32.v": {
+            "format": "vsuxei32.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsuxei64.v": {
+            "format": "vsuxei64.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vsuxei8.v": {
+            "format": "vsuxei8.v {VS3}, ({RS1}), {VS2}, {VM}, {NF}",
+            "variables": [
+                "NF",
+                "VM",
+                "VS2",
+                "RS1",
+                "VS3"
+            ],
+            "category": "v_ext"
+        },
+        "vwadd.vv": {
+            "format": "vwadd.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwadd.vx": {
+            "format": "vwadd.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwadd.wv": {
+            "format": "vwadd.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwadd.wx": {
+            "format": "vwadd.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwaddu.vv": {
+            "format": "vwaddu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwaddu.vx": {
+            "format": "vwaddu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwaddu.wv": {
+            "format": "vwaddu.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwaddu.wx": {
+            "format": "vwaddu.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmacc.vv": {
+            "format": "vwmacc.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmacc.vx": {
+            "format": "vwmacc.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmaccsu.vv": {
+            "format": "vwmaccsu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmaccsu.vx": {
+            "format": "vwmaccsu.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmaccu.vv": {
+            "format": "vwmaccu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmaccu.vx": {
+            "format": "vwmaccu.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmaccus.vx": {
+            "format": "vwmaccus.vx {VD}, {RS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmul.vv": {
+            "format": "vwmul.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmul.vx": {
+            "format": "vwmul.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmulsu.vv": {
+            "format": "vwmulsu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmulsu.vx": {
+            "format": "vwmulsu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmulu.vv": {
+            "format": "vwmulu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwmulu.vx": {
+            "format": "vwmulu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwredsum.vs": {
+            "format": "vwredsum.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwredsumu.vs": {
+            "format": "vwredsumu.vs {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsub.vv": {
+            "format": "vwsub.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsub.vx": {
+            "format": "vwsub.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsub.wv": {
+            "format": "vwsub.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsub.wx": {
+            "format": "vwsub.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsubu.vv": {
+            "format": "vwsubu.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsubu.vx": {
+            "format": "vwsubu.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsubu.wv": {
+            "format": "vwsubu.wv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vwsubu.wx": {
+            "format": "vwsubu.wx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vxor.vi": {
+            "format": "vxor.vi {VD}, {VS2}, {IMM_5}, {VM}",
+            "variables": [
+                "VM",
+                "IMM_5",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vxor.vv": {
+            "format": "vxor.vv {VD}, {VS1}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vxor.vx": {
+            "format": "vxor.vx {VD}, {VS2}, {RS1}, {VM}",
+            "variables": [
+                "VM",
+                "RS1",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vzext.vf2": {
+            "format": "vzext.vf2 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vzext.vf4": {
+            "format": "vzext.vf4 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vzext.vf8": {
+            "format": "vzext.vf8 {VD}, {VS2}, {VM}",
+            "variables": [
+                "VM",
+                "VS2",
+                "VD"
+            ],
+            "category": "v_ext"
+        }
+    },
+    "RV_V_AMO": {
+        "vamoaddei16.v": {
+            "format": "vamoaddei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoaddei32.v": {
+            "format": "vamoaddei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoaddei64.v": {
+            "format": "vamoaddei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoaddei8.v": {
+            "format": "vamoaddei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoandei16.v": {
+            "format": "vamoandei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoandei32.v": {
+            "format": "vamoandei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoandei64.v": {
+            "format": "vamoandei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoandei8.v": {
+            "format": "vamoandei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxei16.v": {
+            "format": "vamomaxei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxei32.v": {
+            "format": "vamomaxei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxei64.v": {
+            "format": "vamomaxei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxei8.v": {
+            "format": "vamomaxei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxuei16.v": {
+            "format": "vamomaxuei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxuei32.v": {
+            "format": "vamomaxuei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxuei64.v": {
+            "format": "vamomaxuei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamomaxuei8.v": {
+            "format": "vamomaxuei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominei16.v": {
+            "format": "vamominei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominei32.v": {
+            "format": "vamominei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominei64.v": {
+            "format": "vamominei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominei8.v": {
+            "format": "vamominei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominuei16.v": {
+            "format": "vamominuei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominuei32.v": {
+            "format": "vamominuei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominuei64.v": {
+            "format": "vamominuei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamominuei8.v": {
+            "format": "vamominuei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoorei16.v": {
+            "format": "vamoorei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoorei32.v": {
+            "format": "vamoorei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoorei64.v": {
+            "format": "vamoorei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoorei8.v": {
+            "format": "vamoorei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoswapei16.v": {
+            "format": "vamoswapei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoswapei32.v": {
+            "format": "vamoswapei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoswapei64.v": {
+            "format": "vamoswapei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoswapei8.v": {
+            "format": "vamoswapei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoxorei16.v": {
+            "format": "vamoxorei16.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoxorei32.v": {
+            "format": "vamoxorei32.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoxorei64.v": {
+            "format": "vamoxorei64.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        },
+        "vamoxorei8.v": {
+            "format": "vamoxorei8.v {VD}, {RS1}, {VS2}, {VM}, {WD}",
+            "variables": [
+                "VM",
+                "VS2",
+                "RS1",
+                "VD"
+            ],
+            "category": "v_ext"
+        }
+    },
 
     # These are some of the illegal instructions generated statically by MystFuzz. 
     "ILL":{
