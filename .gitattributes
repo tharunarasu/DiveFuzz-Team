@@ -1,0 +1,4 @@
+# Keep the shared Linux setup runnable after a Windows checkout.
+scripts/*.sh text eol=lf
+scripts/*.py text eol=lf
+scripts/*.ld text eol=lf

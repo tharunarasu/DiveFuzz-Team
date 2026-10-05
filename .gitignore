@@ -15,3 +15,13 @@ fuzzer/build
 fuzzer/*.yaml
 outputs
 .txt
+
+# Local WSL environment and caches (kept on F:)
+.venv/
+.local/
+
+# Rebuild generated evidence binaries locally; share sources and logs.
+evidence/**/*.elf
+evidence/**/*.img
+evidence/**/*.bloom
+.github-cli/

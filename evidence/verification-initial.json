@@ -1,0 +1,291 @@
+{
+  "checks": [
+    {
+      "name": "platform",
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "seconds": 0.016
+    },
+    {
+      "name": "python-packages",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/.venv/bin/python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "returncode": 0,
+      "seconds": 11.328
+    },
+    {
+      "name": "pip-check",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 11.04
+    },
+    {
+      "name": "compiler",
+      "command": [
+        "riscv64-unknown-elf-gcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "seconds": 0.033
+    },
+    {
+      "name": "assembler",
+      "command": [
+        "riscv64-unknown-elf-as",
+        "--version"
+      ],
+      "returncode": 0,
+      "seconds": 0.012
+    },
+    {
+      "name": "submodules",
+      "command": [
+        "git",
+        "submodule",
+        "status"
+      ],
+      "returncode": 0,
+      "seconds": 2.755
+    },
+    {
+      "name": "commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "seconds": 0.104
+    },
+    {
+      "name": "engine-import",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/.venv/bin/python",
+        "-c",
+        "import sys; sys.path.insert(0, '/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/spike_engine'); import spike_engine; print(spike_engine.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.144
+    },
+    {
+      "name": "reference-assemble",
+      "command": [
+        "riscv64-unknown-elf-as",
+        "-march=rv64gc",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/reference-sanity.S",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/reference-sanity.o"
+      ],
+      "returncode": 0,
+      "seconds": 0.057
+    },
+    {
+      "name": "reference-link",
+      "command": [
+        "riscv64-unknown-elf-ld",
+        "-Ttext=0x80000000",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/reference-sanity.o",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/reference-sanity.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.072
+    },
+    {
+      "name": "reference-execute",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/build/spike",
+        "--isa=rv64gc",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/reference-sanity.elf"
+      ],
+      "returncode": 255,
+      "seconds": 0.064
+    },
+    {
+      "name": "generator-help",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/.venv/bin/python",
+        "-m",
+        "generator.main",
+        "--help"
+      ],
+      "returncode": 0,
+      "seconds": 5.311
+    },
+    {
+      "name": "generator-smoke",
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/.venv/bin/python",
+        "-m",
+        "generator.main",
+        "--generate",
+        "--eliminate",
+        "--architecture",
+        "cva6",
+        "--allowed-ext-name",
+        "cva6",
+        "--template-type",
+        "cva6",
+        "--seeds",
+        "2",
+        "--instr-number",
+        "20",
+        "--max-workers",
+        "1",
+        "--no-jump",
+        "--debug",
+        "--debug-mode",
+        "SUMMARY",
+        "--out-dir",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236"
+      ],
+      "returncode": 0,
+      "seconds": 6.205
+    },
+    {
+      "name": "seeds_0_-assemble",
+      "command": [
+        "riscv64-unknown-elf-as",
+        "-march=rv64gc_zicsr_zifencei_zba_zbb_zbc_zbs_zbkb_zbkc_zbkx_zkne_zknd_zknh",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.S",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.o"
+      ],
+      "returncode": 0,
+      "seconds": 0.057
+    },
+    {
+      "name": "seeds_0_-link",
+      "command": [
+        "riscv64-unknown-elf-ld",
+        "-T",
+        "/mnt/f/DiveFuzz/DiveFuzz/fuzzer/generator/reg_analyzer/linker/link.ld",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.o",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.086
+    },
+    {
+      "name": "seeds_0_-image",
+      "command": [
+        "riscv64-unknown-elf-objcopy",
+        "-O",
+        "binary",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.elf",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.img"
+      ],
+      "returncode": 0,
+      "seconds": 0.038
+    },
+    {
+      "name": "seeds_0_-elf-header",
+      "command": [
+        "riscv64-unknown-elf-readelf",
+        "-h",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_0_.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.018
+    },
+    {
+      "name": "seeds_1_-assemble",
+      "command": [
+        "riscv64-unknown-elf-as",
+        "-march=rv64gc_zicsr_zifencei_zba_zbb_zbc_zbs_zbkb_zbkc_zbkx_zkne_zknd_zknh",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.S",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.o"
+      ],
+      "returncode": 0,
+      "seconds": 0.019
+    },
+    {
+      "name": "seeds_1_-link",
+      "command": [
+        "riscv64-unknown-elf-ld",
+        "-T",
+        "/mnt/f/DiveFuzz/DiveFuzz/fuzzer/generator/reg_analyzer/linker/link.ld",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.o",
+        "-o",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.077
+    },
+    {
+      "name": "seeds_1_-image",
+      "command": [
+        "riscv64-unknown-elf-objcopy",
+        "-O",
+        "binary",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.elf",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.img"
+      ],
+      "returncode": 0,
+      "seconds": 0.029
+    },
+    {
+      "name": "seeds_1_-elf-header",
+      "command": [
+        "riscv64-unknown-elf-readelf",
+        "-h",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104236/seeds_1_.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.089
+    }
+  ],
+  "requested_seeds": 2,
+  "requested_instructions_per_seed": 20,
+  "generated_sources": 2,
+  "isa": "rv64gc_zicsr_zifencei_zba_zbb_zbc_zbs_zbkb_zbkc_zbkx_zkne_zknd_zknh",
+  "artifacts": [
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_0_.S",
+      "bytes": 8427,
+      "sha256": "4a1f1dfe93f7212dd6647352a2bf75d38d3d0fd75dfb24b87d467971b61434aa"
+    },
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_0_.elf",
+      "bytes": 26672,
+      "sha256": "794e99f3e4ac471b1ef141a776068209ea5c79a67782c46956df81a98de0169d"
+    },
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_0_.img",
+      "bytes": 1056768,
+      "sha256": "151a585bc6f1b3ea723e3844da7c0e249204b8717aa2d1172ad01620152ef0f4"
+    },
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_1_.S",
+      "bytes": 8397,
+      "sha256": "7bed46ac85d6c9de59868d9827265d5b67c918f8ba2c1faef7dd500012c09ca4"
+    },
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_1_.elf",
+      "bytes": 26672,
+      "sha256": "df9fafad0918e5071b391ca2f93e7e59af6a263ea50015f348ce52fa7a108cc4"
+    },
+    {
+      "path": "evidence/seeds-20261004-104236/seeds_1_.img",
+      "bytes": 1056768,
+      "sha256": "3b95bb360f18a39fef05b6ce8ee3bee9fdd3e0c96bb9047e02c4f59fd493ba56"
+    }
+  ],
+  "storage_root": "/mnt/f/DiveFuzz/DiveFuzz",
+  "dut_executed": false,
+  "smoke_passed": false
+}

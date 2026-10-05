@@ -1,0 +1,16 @@
+# Debug mode enabled: mode=SUMMARY, filter=ACCEPTED only
+#   Output: /mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104433/spike_debug_seed_*.log
+---Start generate instrs---
+# Timeout per seed: 16.0s
+
+# Generating instructions:   0%|          | 0/2 [00:00<?, ?it/s]
+# Generating instructions:  50%|█████     | 1/2 [00:00<00:00,  1.56it/s]
+# Generating instructions: 100%|██████████| 2/2 [00:01<00:00,  1.36it/s]
+# Generating instructions: 100%|██████████| 2/2 [00:01<00:00,  1.39it/s]
+[Seed 0] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104433/spike_debug_seed_0.log
+[Seed 1] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/seeds-20261004-104433/spike_debug_seed_1.log
+# Successfully generated: 2/2 seeds
+# Total timeouts: 0
+# Total conflict avoidances: 40
+# Total failed conflict avoidances: 1
+# Execution time: 1.60 seconds

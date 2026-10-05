@@ -1,5 +1,24 @@
 # DiveFuzz
 
+## Team reproduction project
+
+This repository shares our DiveFuzz environment setup, paper report, and preliminary verification evidence. The original project is [In2Sec/DiveFuzz](https://github.com/In2Sec/DiveFuzz), developed by the Institute of Information Engineering, Chinese Academy of Sciences; its Mulan PSL v2 license and attribution are preserved.
+
+- [Course report: motivation, background, methodology, and preliminary results](REPORT.md)
+- [Verified environment setup and rerun commands](SETUP.md)
+- [Recorded command results and artifact hashes](evidence/verification.json)
+- [Setup and verification scripts](scripts/)
+
+The local checkpoint built adapted Spike, executed a reference arithmetic test, and generated two seeds with 20 accepted instructions each. Both seeds compiled successfully. RTL CPU testing and coverage experiments remain future work. Generated binaries, Python environments, and caches are excluded from Git; source seeds and logs are included.
+
+Clone with submodules when setting up a teammate's checkout:
+
+```bash
+git clone --recurse-submodules <this-repository-url>
+```
+
+The instructions below are the original project's setup documentation. Use `SETUP.md` for the verified WSL/F: workflow and fixes for Windows checkouts.
+
 DiveFuzz is a diversified instruction generation approach designed specifically for RISC-V CPUs. Its core idea is to drive testing through dynamically diversified instruction write-back values, enabling effective exploration of CPU states. More details can be found in the [paper](https://dl.acm.org/doi/10.1145/3719027.3765167). In addition, the project is under active development and will continue to incorporate new extensions and features.
 
 

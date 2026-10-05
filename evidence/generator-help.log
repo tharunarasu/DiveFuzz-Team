@@ -1,0 +1,65 @@
+usage: main.py [-h] [--mutation] [--generate] [--rv32] [-e]
+               [--architecture {xiangshan,nutshell,rocket,cva6,boom}]
+               [--allowed-ext-name {cva6,cva6_cascade,rv32,general,base,nutshell,nutshell_rv32,boom,xiangshan,rocket,rocket_rv32}]
+               [--template-type {xiangshan,nutshell,rocket,cva6,boom}]
+               [--instr-number N] [--seeds K] [--max-workers MAX_WORKERS]
+               [--seed-dir SEED_DIR] [--mutate-out MUTATE_OUT]
+               [--out-dir OUT_DIR] [--no-stateful-xor-cache] [--no-bug-filter]
+               [--no-jump] [--enable-ext] [--exclude-ext [EXCLUDE_EXT ...]]
+               [--debug] [--debug-mode {FULL,DIFF,SUMMARY}] [--debug-all]
+               [--debug-no-csr] [--debug-no-fpr]
+
+Process some integers.
+
+options:
+  -h, --help            show this help message and exit
+  --mutation            Enable mutation process (default: False)
+  --generate            Enable generate (default: False)
+  --rv32                RV32 environments (RV32) (default: False)
+  -e, --eliminate       Enable the constraint "Eliminate identical write-back
+                        data" (conflict avoidance) (default: False)
+  --architecture {xiangshan,nutshell,rocket,cva6,boom}
+                        Architecture for bug filter (default: xs)
+  --allowed-ext-name {cva6,cva6_cascade,rv32,general,base,nutshell,nutshell_rv32,boom,xiangshan,rocket,rocket_rv32}
+                        Select the collection of allowed_ext. (default:
+                        general)
+  --template-type {xiangshan,nutshell,rocket,cva6,boom}
+                        Template type for assembly generation (default:
+                        xiangshan)
+  --instr-number N      Number of instructions to be generated per seed file
+                        (default: 200)
+  --seeds K             Number of seed files generated (i.e., number of seed
+                        files) (default: 10)
+  --max-workers MAX_WORKERS
+                        Number of parallel processes (default: 20)
+  --seed-dir SEED_DIR   Directory to read .S seed files in variant mode
+                        (default: out-seeds-2025-test)
+  --mutate-out MUTATE_OUT
+                        Mutation result output directory (default: <seed-
+                        dir>/mutate) (default: None)
+  --out-dir OUT_DIR     Output seed file directory in generate mode (used in
+                        generate mode) (default: out-seeds-2025-test)
+  --no-stateful-xor-cache
+                        Use stateless XORCache instead of StatefulXORCache for
+                        duplicate elimination (default: True)
+  --no-bug-filter       Disable known-bug filtering during instruction
+                        generation (default: True)
+  --no-jump             Disable jump/branch instruction generation (default:
+                        True)
+  --enable-ext          Mutation allows the introduction of the current file
+                        did not appear in the expansion of the instruction
+                        (default: False)
+  --exclude-ext [EXCLUDE_EXT ...]
+                        List of extensions (separated by spaces) to be
+                        excluded at mutation/generation time (default: [])
+  --debug               Enable debug mode: log all register and CSR states
+                        after each instruction execution (default: False)
+  --debug-mode {FULL,DIFF,SUMMARY}
+                        Debug output mode: FULL (all state), DIFF (changes
+                        only), SUMMARY (key regs) (default: FULL)
+  --debug-all           Log ALL instructions (default: only ACCEPTED
+                        instructions) (default: False)
+  --debug-no-csr        Disable CSR logging in debug output (reduces file
+                        size) (default: False)
+  --debug-no-fpr        Disable FPR (floating-point registers) logging in
+                        debug output (default: False)

@@ -1,0 +1,6 @@
+-63a2687089ec374e6bd19d85ec040caab297dbff dut/NutShell
+-d5cc24e88fe207105d4ad6d113a972dd6847dd56 dut/XiangShan
+-847a1ba0a281032e5dfaa35888ba663e164ad44c dut/rocket-chip
+ 72b292677715a091a441c9a55f9d62715d3c5ba2 fuzzer/generator/reg_analyzer/riscv-opcodes (remotes/origin/incoresemi-migration-to-new-format-338-g72b2926)
+-fd72ee2d3e0d1703451c446d467387ff0576e492 ref/riscv-isa-sim
+ a585f5b88d83ea0a9a844eb68904d2b849176580 ref/riscv-isa-sim-adapter (heads/master)
