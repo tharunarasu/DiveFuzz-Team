@@ -5,6 +5,23 @@
 **Local artifact:** commit `13b028f8aaf16e4a0bb3476c2af9c866ab42353d`.  
 **Scope:** paper study, source inspection, and an environment checkpoint. The current repository is actively developed; this checkout is not established as the exact artifact used for the paper.
 
+## Actual test results from our run
+
+These are locally measured results from the environment verification run, rather than results claimed by the original paper.
+
+| Test performed | Actual result |
+|---|---|
+| Build and import adapted Spike's Python engine | Passed |
+| Execute a small arithmetic program in Spike | Passed |
+| Generate DiveFuzz seeds with elimination enabled | **2/2 seeds generated** |
+| Validate generated instructions through Spike | **20 accepted instructions per seed — 40 total** |
+| Assemble, link, and create binary images | **Both seeds passed** |
+| Generation timeouts | **0** |
+
+Evidence: [generator output](evidence/generator-smoke.log), [recorded command results](evidence/verification.json), and instruction-level debug logs for [seed 0](evidence/seeds-20261004-104433/spike_debug_seed_0.log) and [seed 1](evidence/seeds-20261004-104433/spike_debug_seed_1.log).
+
+**Scope:** This verifies the selected generation, reference-execution, and compilation workflow. No RTL CPU emulator was executed, and CPU coverage or discovered bugs were not measured. Section 4 below provides the detailed measurements and setup problems.
+
 ## 1. Motivation of the original paper — 25 points
 
 The authors identify repetitive instruction write-back values and uneven opcode selection in existing CPU fuzzers. DiveFuzz aims to diversify execution outcomes and instruction semantics so that testing reaches a broader range of CPU states. Its approach combines runtime operand construction, contextual semantics, and mutation that adjusts opcode distribution. [Paper abstract](https://doi.org/10.1145/3719027.3765167).
