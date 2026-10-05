@@ -14,7 +14,7 @@ The local checkpoint built adapted Spike, executed a reference arithmetic test, 
 Clone with submodules when setting up a teammate's checkout:
 
 ```bash
-git clone --recurse-submodules <this-repository-url>
+git clone --recurse-submodules https://github.com/tharunarasu/DiveFuzz-Team.git
 ```
 
 The instructions below are the original project's setup documentation. Use `SETUP.md` for the verified WSL/F: workflow and fixes for Windows checkouts.
