@@ -1,0 +1,1780 @@
+================================================================================
+  SPIKE DEBUG LOG
+  Generated: 2026-11-19T18:50:33.111723
+  Mode: SUMMARY
+  Log CSR: True, Log FPR: True
+  Filter: ACCEPTED only
+================================================================================
+
+--------------------------------------------------------------------------------
+[#000001] [ACCEPTED] mulhsu s5, s5, a5
+--------------------------------------------------------------------------------
+  Machine Code: 0x02faaab3 (size=4)
+  PC: 0x0000000080001020 -> 0x0000000080001024
+  Source: [r21=0x51a91d7b4b71d4d3, r15=0xed87b6691ebc0a0a]
+  Dest:   [r21=0x4bc4daa973fdb71d]
+  XOR Value: 0x8aa671a97609c0c7
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0x5497d70fa602c41e
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x21/s5      : 0x4bc4daa973fdb71d
+
+--------------------------------------------------------------------------------
+[#000002] [ACCEPTED] sub a3, s5, s5
+--------------------------------------------------------------------------------
+  Machine Code: 0x415a86b3 (size=4)
+  PC: 0x0000000080001024 -> 0x0000000080001028
+  Source: [r21=0x4bc4daa973fdb71d, r21=0x4bc4daa973fdb71d]
+  Dest:   [r13=0x0]
+  XOR Value: 0xdc4d6ffb9406d927
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0x5497d70fa602c41e
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x13/a3      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000003] [ACCEPTED] ori s11, s11, 1891
+--------------------------------------------------------------------------------
+  Machine Code: 0x763ded93 (size=4)
+  PC: 0x0000000080001028 -> 0x000000008000102c
+  Source: [r27=0x7ebf4d2a5c6ec438]
+  Dest:   [r27=0x7ebf4d2a5c6ec77b]
+  XOR Value: 0x7ebf4d2a5c6ecafe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0x5497d70fa602c41e
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x27/s11     : 0x7ebf4d2a5c6ec77b
+
+--------------------------------------------------------------------------------
+[#000004] [ACCEPTED] sll s5, s2, s5
+--------------------------------------------------------------------------------
+  Machine Code: 0x01591ab3 (size=4)
+  PC: 0x000000008000102c -> 0x0000000080001030
+  Source: [r18=0x1205833d2e20e29e, r21=0x4bc4daa973fdb71d]
+  Dest:   [r21=0xa5c41c53c0000000]
+  XOR Value: 0x858c366fc9db8ca4
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0x5497d70fa602c41e
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x21/s5      : 0xa5c41c53c0000000
+
+--------------------------------------------------------------------------------
+[#000005] [ACCEPTED] divw sp, s11, sp
+--------------------------------------------------------------------------------
+  Machine Code: 0x022dc13b (size=4)
+  PC: 0x0000000080001030 -> 0x0000000080001034
+  Source: [r27=0x7ebf4d2a5c6ec77b, r2=0x5497d70fa602c41e]
+  Dest:   [r2=0xffffffffffffffff]
+  XOR Value: 0xd790e335106b4f47
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+  *x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000006] [ACCEPTED] div a5, s2, s11
+--------------------------------------------------------------------------------
+  Machine Code: 0x03b947b3 (size=4)
+  PC: 0x0000000080001034 -> 0x0000000080001038
+  Source: [r18=0x1205833d2e20e29e, r27=0x7ebf4d2a5c6ec77b]
+  Dest:   [r15=0x0]
+  XOR Value: 0xef7b196996fd6c68
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x15/a5      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000007] [ACCEPTED] rem a3, s2, t1
+--------------------------------------------------------------------------------
+  Machine Code: 0x026966b3 (size=4)
+  PC: 0x0000000080001038 -> 0x000000008000103c
+  Source: [r18=0x1205833d2e20e29e, r6=0x295fa7abadf532aa]
+  Dest:   [r13=0x1205833d2e20e29e]
+  XOR Value: 0x40bacc6a75ca87ca
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x13/a3      : 0x1205833d2e20e29e
+
+--------------------------------------------------------------------------------
+[#000008] [ACCEPTED] slliw t1, t1, 31
+--------------------------------------------------------------------------------
+  Machine Code: 0x01f3131b (size=4)
+  PC: 0x000000008000103c -> 0x0000000080001040
+  Source: [r6=0x295fa7abadf532aa]
+  Dest:   [r6=0x0]
+  XOR Value: 0x295fa7abadf53294
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+  *x6/t1       : 0x0000000000000000
+   x8/s0       : 0x532fb08d5a81d023
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000009] [ACCEPTED] sraiw s0, sp, 10
+--------------------------------------------------------------------------------
+  Machine Code: 0x40a1541b (size=4)
+  PC: 0x0000000080001040 -> 0x0000000080001044
+  Source: [r2=0xffffffffffffffff]
+  Dest:   [r8=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffffeb
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+  *x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000010] [ACCEPTED] sll t2, sp, s2
+--------------------------------------------------------------------------------
+  Machine Code: 0x012113b3 (size=4)
+  PC: 0x0000000080001044 -> 0x0000000080001048
+  Source: [r2=0xffffffffffffffff, r18=0x1205833d2e20e29e]
+  Dest:   [r7=0xffffffffc0000000]
+  XOR Value: 0xdbf4f985a3be3ac3
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+  *x7/t2       : 0xffffffffc0000000
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000011] [ACCEPTED] mulw s5, t2, a0
+--------------------------------------------------------------------------------
+  Machine Code: 0x02a38abb (size=4)
+  PC: 0x0000000080001048 -> 0x000000008000104c
+  Source: [r7=0xffffffffc0000000, r10=0xbc63d822ad4b4ea5]
+  Dest:   [r21=0xffffffffc0000000]
+  XOR Value: 0x87384fba9a969d4a
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x21/s5      : 0xffffffffc0000000
+
+--------------------------------------------------------------------------------
+[#000012] [ACCEPTED] mul s8, a3, t0
+--------------------------------------------------------------------------------
+  Machine Code: 0x02568c33 (size=4)
+  PC: 0x000000008000104c -> 0x0000000080001050
+  Source: [r13=0x1205833d2e20e29e, r5=0xc017e338bd089cb0]
+  Dest:   [r24=0x2110e7117ba414a0]
+  XOR Value: 0x922a454c5431dbfe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x72319c3f9b3721c2
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x24/s8      : 0x2110e7117ba414a0
+
+--------------------------------------------------------------------------------
+[#000013] [ACCEPTED] mul ra, s5, t1
+--------------------------------------------------------------------------------
+  Machine Code: 0x026a80b3 (size=4)
+  PC: 0x0000000080001050 -> 0x0000000080001054
+  Source: [r21=0xffffffffc0000000, r6=0x0]
+  Dest:   [r1=0x0]
+  XOR Value: 0xffffffffc0000000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+  *x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000014] [ACCEPTED] divu sp, sp, ra
+--------------------------------------------------------------------------------
+  Machine Code: 0x02115133 (size=4)
+  PC: 0x0000000080001054 -> 0x0000000080001058
+  Source: [r2=0xffffffffffffffff, r1=0x0]
+  Dest:   [r2=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+  *x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000015] [ACCEPTED] divu t4, s10, s5
+--------------------------------------------------------------------------------
+  Machine Code: 0x035d5eb3 (size=4)
+  PC: 0x0000000080001058 -> 0x000000008000105c
+  Source: [r26=0x80b50745c61ec987, r21=0xffffffffc0000000]
+  Dest:   [r29=0x0]
+  XOR Value: 0x7f4af8ba461ec987
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+  *x29/t4      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000016] [ACCEPTED] srai s0, s0, 57
+--------------------------------------------------------------------------------
+  Machine Code: 0x43945413 (size=4)
+  PC: 0x000000008000105c -> 0x0000000080001060
+  Source: [r8=0xffffffffffffffff]
+  Dest:   [r8=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffff8d
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+  *x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xbc63d822ad4b4ea5
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000017] [ACCEPTED] or a0, sp, a0
+--------------------------------------------------------------------------------
+  Machine Code: 0x00a16533 (size=4)
+  PC: 0x0000000080001060 -> 0x0000000080001064
+  Source: [r2=0xffffffffffffffff, r10=0xbc63d822ad4b4ea5]
+  Dest:   [r10=0xffffffffffffffff]
+  XOR Value: 0x87384fbaa56962b5
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+  *x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0x33a50509c82756bf
+
+--------------------------------------------------------------------------------
+[#000018] [ACCEPTED] remw a1, a0, tp
+--------------------------------------------------------------------------------
+  Machine Code: 0x024565bb (size=4)
+  PC: 0x0000000080001064 -> 0x0000000080001068
+  Source: [r10=0xffffffffffffffff, r4=0x4beab57e40ca9569]
+  Dest:   [r11=0xffffffffffffffff]
+  XOR Value: 0x682a95037e6ad52d
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+  *x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000019] [ACCEPTED] and s7, s0, a1
+--------------------------------------------------------------------------------
+  Machine Code: 0x00b47bb3 (size=4)
+  PC: 0x0000000080001068 -> 0x000000008000106c
+  Source: [r8=0xffffffffffffffff, r11=0xffffffffffffffff]
+  Dest:   [r23=0xffffffffffffffff]
+  XOR Value: 0x0000000000000001
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x23/s7      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000020] [ACCEPTED] rem a5, s7, tp
+--------------------------------------------------------------------------------
+  Machine Code: 0x024be7b3 (size=4)
+  PC: 0x000000008000106c -> 0x0000000080001070
+  Source: [r23=0xffffffffffffffff, r4=0x4beab57e40ca9569]
+  Dest:   [r15=0xffffffffffffffff]
+  XOR Value: 0x682a95037e6ad52d
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x15/a5      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000021] [ACCEPTED] sraw t3, a1, s9
+--------------------------------------------------------------------------------
+  Machine Code: 0x4195de3b (size=4)
+  PC: 0x0000000080001070 -> 0x0000000080001074
+  Source: [r11=0xffffffffffffffff, r25=0xab0e46d485417e00]
+  Dest:   [r28=0xffffffffffffffff]
+  XOR Value: 0xa9e37256f57d03ff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x28/t3      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000022] [ACCEPTED] remw t4, s3, s7
+--------------------------------------------------------------------------------
+  Machine Code: 0x0379eebb (size=4)
+  PC: 0x0000000080001074 -> 0x0000000080001078
+  Source: [r19=0xb03538b0dc3d8223, r23=0xffffffffffffffff]
+  Dest:   [r29=0x0]
+  XOR Value: 0x4fcac74f23c27ddd
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x29/t4      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000023] [ACCEPTED] div s9, s9, a5
+--------------------------------------------------------------------------------
+  Machine Code: 0x02fcccb3 (size=4)
+  PC: 0x0000000080001078 -> 0x000000008000107c
+  Source: [r25=0xab0e46d485417e00, r15=0xffffffffffffffff]
+  Dest:   [r25=0x54f1b92b7abe8200]
+  XOR Value: 0x54f1b92b7abe81fe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x25/s9      : 0x54f1b92b7abe8200
+
+--------------------------------------------------------------------------------
+[#000024] [ACCEPTED] sra s8, s7, s9
+--------------------------------------------------------------------------------
+  Machine Code: 0x419bdc33 (size=4)
+  PC: 0x000000008000107c -> 0x0000000080001080
+  Source: [r23=0xffffffffffffffff, r25=0x54f1b92b7abe8200]
+  Dest:   [r24=0xffffffffffffffff]
+  XOR Value: 0x561c8da90a82fbff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x24/s8      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000025] [ACCEPTED] slliw tp, s9, 23
+--------------------------------------------------------------------------------
+  Machine Code: 0x017c921b (size=4)
+  PC: 0x0000000080001080 -> 0x0000000080001084
+  Source: [r25=0x54f1b92b7abe8200]
+  Dest:   [r4=0x0]
+  XOR Value: 0x54f1b92b7abe822e
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+  *x4/tp       : 0x0000000000000000
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000026] [ACCEPTED] slt t2, s8, t4
+--------------------------------------------------------------------------------
+  Machine Code: 0x01dc23b3 (size=4)
+  PC: 0x0000000080001084 -> 0x0000000080001088
+  Source: [r24=0xffffffffffffffff, r29=0x0]
+  Dest:   [r7=0x1]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+  *x7/t2       : 0x0000000000000001
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000027] [ACCEPTED] remw zero, a5, s6
+--------------------------------------------------------------------------------
+  Machine Code: 0x0367e03b (size=4)
+  PC: 0x0000000080001088 -> 0x000000008000108c
+  Source: [r15=0xffffffffffffffff, r22=0x9b925ca149d1bc6a]
+  Dest:   [r0=0x0]
+  XOR Value: 0xc8db46bd6c5c872b
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000028] [ACCEPTED] remuw s4, ra, a2
+--------------------------------------------------------------------------------
+  Machine Code: 0x02c0fa3b (size=4)
+  PC: 0x000000008000108c -> 0x0000000080001090
+  Source: [r1=0x0, r12=0xabc941911f54cd8e]
+  Dest:   [r20=0x0]
+  XOR Value: 0x579283223ea99b1c
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x20/s4      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000029] [ACCEPTED] sraiw ra, a5, 0
+--------------------------------------------------------------------------------
+  Machine Code: 0x4007d09b (size=4)
+  PC: 0x0000000080001090 -> 0x0000000080001094
+  Source: [r15=0xffffffffffffffff]
+  Dest:   [r1=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+  *x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000030] [ACCEPTED] andi a2, s4, -2048
+--------------------------------------------------------------------------------
+  Machine Code: 0x800a7613 (size=4)
+  PC: 0x0000000080001094 -> 0x0000000080001098
+  Source: [r20=0x0]
+  Dest:   [r12=0x0]
+  XOR Value: 0xfffffffffffff000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x12/a2      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000031] [ACCEPTED] sraiw zero, a6, 31
+--------------------------------------------------------------------------------
+  Machine Code: 0x41f8501b (size=4)
+  PC: 0x0000000080001098 -> 0x000000008000109c
+  Source: [r16=0x7b489f3360acbb8c]
+  Dest:   [r0=0x0]
+  XOR Value: 0x7b489f3360acbbb2
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000032] [ACCEPTED] divu a5, a4, zero
+--------------------------------------------------------------------------------
+  Machine Code: 0x020757b3 (size=4)
+  PC: 0x000000008000109c -> 0x00000000800010a0
+  Source: [r14=0x69ea9c291a99487f, r0=0x0]
+  Dest:   [r15=0xffffffffffffffff]
+  XOR Value: 0x69ea9c291a99487f
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x15/a5      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000033] [ACCEPTED] sltiu s1, sp, 1445
+--------------------------------------------------------------------------------
+  Machine Code: 0x5a513493 (size=4)
+  PC: 0x00000000800010a0 -> 0x00000000800010a4
+  Source: [r2=0xffffffffffffffff]
+  Dest:   [r9=0x0]
+  XOR Value: 0xfffffffffffff4b5
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+  *x9/s1       : 0x0000000000000000
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000034] [ACCEPTED] div s3, a7, ra
+--------------------------------------------------------------------------------
+  Machine Code: 0x0218c9b3 (size=4)
+  PC: 0x00000000800010a4 -> 0x00000000800010a8
+  Source: [r17=0xb7431e83800a5aa6, r1=0xffffffffffffffff]
+  Dest:   [r19=0x48bce17c7ff5a55a]
+  XOR Value: 0x48bce17c7ff5a558
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x19/s3      : 0x48bce17c7ff5a55a
+
+--------------------------------------------------------------------------------
+[#000035] [ACCEPTED] mulw a3, a3, s0
+--------------------------------------------------------------------------------
+  Machine Code: 0x028686bb (size=4)
+  PC: 0x00000000800010a8 -> 0x00000000800010ac
+  Source: [r13=0x1205833d2e20e29e, r8=0xffffffffffffffff]
+  Dest:   [r13=0xffffffffd1df1d62]
+  XOR Value: 0xedfa7cc2d1df1d60
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x13/a3      : 0xffffffffd1df1d62
+
+--------------------------------------------------------------------------------
+[#000036] [ACCEPTED] divu s6, a7, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02d8db33 (size=4)
+  PC: 0x00000000800010ac -> 0x00000000800010b0
+  Source: [r17=0xb7431e83800a5aa6, r13=0xffffffffd1df1d62]
+  Dest:   [r22=0x0]
+  XOR Value: 0x48bce17c23b46062
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x22/s6      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000037] [ACCEPTED] remw s5, s6, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02db6abb (size=4)
+  PC: 0x00000000800010b0 -> 0x00000000800010b4
+  Source: [r22=0x0, r13=0xffffffffd1df1d62]
+  Dest:   [r21=0x0]
+  XOR Value: 0xffffffffa3be3ac4
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x21/s5      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000038] [ACCEPTED] divw a7, a7, a7
+--------------------------------------------------------------------------------
+  Machine Code: 0x0318c8bb (size=4)
+  PC: 0x00000000800010b4 -> 0x00000000800010b8
+  Source: [r17=0xb7431e83800a5aa6, r17=0xb7431e83800a5aa6]
+  Dest:   [r17=0x1]
+  XOR Value: 0xd9c52384801eefea
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x17/a7      : 0x0000000000000001
+
+--------------------------------------------------------------------------------
+[#000039] [ACCEPTED] subw a7, a4, a7
+--------------------------------------------------------------------------------
+  Machine Code: 0x411708bb (size=4)
+  PC: 0x00000000800010b8 -> 0x00000000800010bc
+  Source: [r14=0x69ea9c291a99487f, r17=0x1]
+  Dest:   [r17=0x1a99487e]
+  XOR Value: 0x69ea9c291a99487d
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x17/a7      : 0x000000001a99487e
+
+--------------------------------------------------------------------------------
+[#000040] [ACCEPTED] slli t2, sp, 61
+--------------------------------------------------------------------------------
+  Machine Code: 0x03d11393 (size=4)
+  PC: 0x00000000800010bc -> 0x00000000800010c0
+  Source: [r2=0xffffffffffffffff]
+  Dest:   [r7=0xe000000000000000]
+  XOR Value: 0xffffffffffffff85
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+  *x7/t2       : 0xe000000000000000
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000041] [ACCEPTED] srl s1, t3, t2
+--------------------------------------------------------------------------------
+  Machine Code: 0x007e54b3 (size=4)
+  PC: 0x00000000800010c0 -> 0x00000000800010c4
+  Source: [r28=0xffffffffffffffff, r7=0xe000000000000000]
+  Dest:   [r9=0xffffffffffffffff]
+  XOR Value: 0x3fffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+  *x9/s1       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000042] [ACCEPTED] addw s9, t3, t2
+--------------------------------------------------------------------------------
+  Machine Code: 0x007e0cbb (size=4)
+  PC: 0x00000000800010c4 -> 0x00000000800010c8
+  Source: [r28=0xffffffffffffffff, r7=0xe000000000000000]
+  Dest:   [r25=0xffffffffffffffff]
+  XOR Value: 0x3fffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x25/s9      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000043] [ACCEPTED] remuw s11, s9, a7
+--------------------------------------------------------------------------------
+  Machine Code: 0x031cfdbb (size=4)
+  PC: 0x00000000800010c8 -> 0x00000000800010cc
+  Source: [r25=0xffffffffffffffff, r17=0x1a99487e]
+  Dest:   [r27=0x109c7391]
+  XOR Value: 0xffffffffcacd6f03
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x27/s11     : 0x00000000109c7391
+
+--------------------------------------------------------------------------------
+[#000044] [ACCEPTED] srlw s3, s1, s11
+--------------------------------------------------------------------------------
+  Machine Code: 0x01b4d9bb (size=4)
+  PC: 0x00000000800010cc -> 0x00000000800010d0
+  Source: [r9=0xffffffffffffffff, r27=0x109c7391]
+  Dest:   [r19=0x7fff]
+  XOR Value: 0xffffffffdec718dd
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x19/s3      : 0x0000000000007fff
+
+--------------------------------------------------------------------------------
+[#000045] [ACCEPTED] andi s2, s2, 403
+--------------------------------------------------------------------------------
+  Machine Code: 0x19397913 (size=4)
+  PC: 0x00000000800010d0 -> 0x00000000800010d4
+  Source: [r18=0x1205833d2e20e29e]
+  Dest:   [r18=0x92]
+  XOR Value: 0x1205833d2e20e1b8
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x18/s2      : 0x0000000000000092
+
+--------------------------------------------------------------------------------
+[#000046] [ACCEPTED] srli s6, s11, 63
+--------------------------------------------------------------------------------
+  Machine Code: 0x03fddb13 (size=4)
+  PC: 0x00000000800010d4 -> 0x00000000800010d8
+  Source: [r27=0x109c7391]
+  Dest:   [r22=0x0]
+  XOR Value: 0x00000000109c73ef
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x22/s6      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000047] [ACCEPTED] divuw a7, a7, a0
+--------------------------------------------------------------------------------
+  Machine Code: 0x02a8d8bb (size=4)
+  PC: 0x00000000800010d8 -> 0x00000000800010dc
+  Source: [r17=0x1a99487e, r10=0xffffffffffffffff]
+  Dest:   [r17=0x0]
+  XOR Value: 0xffffffffe566b780
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x17/a7      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000048] [ACCEPTED] sltu s8, s2, s8
+--------------------------------------------------------------------------------
+  Machine Code: 0x01893c33 (size=4)
+  PC: 0x00000000800010dc -> 0x00000000800010e0
+  Source: [r18=0x92, r24=0xffffffffffffffff]
+  Dest:   [r24=0x1]
+  XOR Value: 0xffffffffffffff6c
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x24/s8      : 0x0000000000000001
+
+--------------------------------------------------------------------------------
+[#000049] [ACCEPTED] sd s0, -1344(t6)
+--------------------------------------------------------------------------------
+  Machine Code: 0xac8fb023 (size=4)
+  PC: 0x00000000800010e0 -> 0x00000000800010e4
+  Source: [r8=0xffffffffffffffff, r31=0x80101000]
+  XOR Value: 0xfffffffeffdfdfff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0xffffffffffffffff
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000050] [ACCEPTED] srliw ra, t0, 1
+--------------------------------------------------------------------------------
+  Machine Code: 0x0012d09b (size=4)
+  PC: 0x00000000800010e4 -> 0x00000000800010e8
+  Source: [r5=0xc017e338bd089cb0]
+  Dest:   [r1=0x5e844e58]
+  XOR Value: 0xc017e338bd089cb2
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+  *x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000051] [ACCEPTED] mulhsu gp, s8, gp
+--------------------------------------------------------------------------------
+  Machine Code: 0x023c21b3 (size=4)
+  PC: 0x00000000800010e8 -> 0x00000000800010ec
+  Source: [r24=0x1, r3=0x35d1dd8f11de1b36]
+  Dest:   [r3=0x0]
+  XOR Value: 0x6ba3bb1e23bc366d
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+  *x3/gp       : 0x0000000000000000
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000052] [ACCEPTED] divu t3, t0, s8
+--------------------------------------------------------------------------------
+  Machine Code: 0x0382de33 (size=4)
+  PC: 0x00000000800010ec -> 0x00000000800010f0
+  Source: [r5=0xc017e338bd089cb0, r24=0x1]
+  Dest:   [r28=0xc017e338bd089cb0]
+  XOR Value: 0xc017e338bd089cb2
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x28/t3      : 0xc017e338bd089cb0
+
+--------------------------------------------------------------------------------
+[#000053] [ACCEPTED] rem a2, gp, s2
+--------------------------------------------------------------------------------
+  Machine Code: 0x0321e633 (size=4)
+  PC: 0x00000000800010f0 -> 0x00000000800010f4
+  Source: [r3=0x0, r18=0x92]
+  Dest:   [r12=0x0]
+  XOR Value: 0x0000000000000124
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x12/a2      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000054] [ACCEPTED] mulw a6, t4, a6
+--------------------------------------------------------------------------------
+  Machine Code: 0x030e883b (size=4)
+  PC: 0x00000000800010f4 -> 0x00000000800010f8
+  Source: [r29=0x0, r16=0x7b489f3360acbb8c]
+  Dest:   [r16=0x0]
+  XOR Value: 0xf6913e66c1597718
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x16/a6      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000055] [ACCEPTED] remuw s2, s0, s2
+--------------------------------------------------------------------------------
+  Machine Code: 0x0324793b (size=4)
+  PC: 0x00000000800010f8 -> 0x00000000800010fc
+  Source: [r8=0xffffffffffffffff, r18=0x92]
+  Dest:   [r18=0x1f]
+  XOR Value: 0xfffffffffffffedb
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x18/s2      : 0x000000000000001f
+
+--------------------------------------------------------------------------------
+[#000056] [ACCEPTED] divu s3, s8, s8
+--------------------------------------------------------------------------------
+  Machine Code: 0x038c59b3 (size=4)
+  PC: 0x00000000800010fc -> 0x0000000080001100
+  Source: [r24=0x1, r24=0x1]
+  Dest:   [r19=0x1]
+  XOR Value: 0x0000000000000003
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x19/s3      : 0x0000000000000001
+
+--------------------------------------------------------------------------------
+[#000057] [ACCEPTED] remuw a0, a1, t1
+--------------------------------------------------------------------------------
+  Machine Code: 0x0265f53b (size=4)
+  PC: 0x0000000080001100 -> 0x0000000080001104
+  Source: [r11=0xffffffffffffffff, r6=0x0]
+  Dest:   [r10=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+  *x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000058] [ACCEPTED] sraiw s8, s4, 17
+--------------------------------------------------------------------------------
+  Machine Code: 0x411a5c1b (size=4)
+  PC: 0x0000000080001104 -> 0x0000000080001108
+  Source: [r20=0x0]
+  Dest:   [r24=0x0]
+  XOR Value: 0x0000000000000022
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x24/s8      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000059] [ACCEPTED] sb a0, -1724(t6)
+--------------------------------------------------------------------------------
+  Machine Code: 0x94af8223 (size=4)
+  PC: 0x0000000080001108 -> 0x000000008000110c
+  Source: [r10=0xffffffffffffffff, r31=0x80101000]
+  XOR Value: 0xfffffffeffdfdfff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000060] [ACCEPTED] mulhsu s1, s1, ra
+--------------------------------------------------------------------------------
+  Machine Code: 0x0214a4b3 (size=4)
+  PC: 0x000000008000110c -> 0x0000000080001110
+  Source: [r9=0xffffffffffffffff, r1=0x5e844e58]
+  Dest:   [r9=0xffffffffffffffff]
+  XOR Value: 0xffffffff42f7634f
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0xffffffffffffffff
+  *x9/s1       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000061] [ACCEPTED] sraiw t0, s8, 24
+--------------------------------------------------------------------------------
+  Machine Code: 0x418c529b (size=4)
+  PC: 0x0000000080001110 -> 0x0000000080001114
+  Source: [r24=0x0]
+  Dest:   [r5=0x0]
+  XOR Value: 0x0000000000000030
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+  *x5/t0       : 0x0000000000000000
+   x8/s0       : 0xffffffffffffffff
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000062] [ACCEPTED] srlw s0, tp, a4
+--------------------------------------------------------------------------------
+  Machine Code: 0x00e2543b (size=4)
+  PC: 0x0000000080001114 -> 0x0000000080001118
+  Source: [r4=0x0, r14=0x69ea9c291a99487f]
+  Dest:   [r8=0x0]
+  XOR Value: 0xd3d53852353290fe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+  *x8/s0       : 0x0000000000000000
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000063] [ACCEPTED] sraiw s2, t0, 27
+--------------------------------------------------------------------------------
+  Machine Code: 0x41b2d91b (size=4)
+  PC: 0x0000000080001118 -> 0x000000008000111c
+  Source: [r5=0x0]
+  Dest:   [r18=0x0]
+  XOR Value: 0x0000000000000036
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x18/s2      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000064] [ACCEPTED] sw s1, 996(t6)
+--------------------------------------------------------------------------------
+  Machine Code: 0x3e9fa223 (size=4)
+  PC: 0x000000008000111c -> 0x0000000080001120
+  Source: [r9=0xffffffffffffffff, r31=0x80101000]
+  XOR Value: 0xfffffffeffdfdfff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000065] [ACCEPTED] remu t4, sp, s10
+--------------------------------------------------------------------------------
+  Machine Code: 0x03a17eb3 (size=4)
+  PC: 0x0000000080001120 -> 0x0000000080001124
+  Source: [r2=0xffffffffffffffff, r26=0x80b50745c61ec987]
+  Dest:   [r29=0x7f4af8ba39e13678]
+  XOR Value: 0xfe95f17473c26cf1
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0xffffffffffffffff
+   x11/a1      : 0xffffffffffffffff
+  *x29/t4      : 0x7f4af8ba39e13678
+
+--------------------------------------------------------------------------------
+[#000066] [ACCEPTED] srli a0, s4, 49
+--------------------------------------------------------------------------------
+  Machine Code: 0x031a5513 (size=4)
+  PC: 0x0000000080001124 -> 0x0000000080001128
+  Source: [r20=0x0]
+  Dest:   [r10=0x0]
+  XOR Value: 0x0000000000000062
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+  *x10/a0      : 0x0000000000000000
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000067] [ACCEPTED] rem a0, a4, a2
+--------------------------------------------------------------------------------
+  Machine Code: 0x02c76533 (size=4)
+  PC: 0x0000000080001128 -> 0x000000008000112c
+  Source: [r14=0x69ea9c291a99487f, r12=0x0]
+  Dest:   [r10=0x69ea9c291a99487f]
+  XOR Value: 0x69ea9c291a99487f
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+  *x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000068] [ACCEPTED] srlw s10, zero, s3
+--------------------------------------------------------------------------------
+  Machine Code: 0x01305d3b (size=4)
+  PC: 0x000000008000112c -> 0x0000000080001130
+  Source: [r0=0x0, r19=0x1]
+  Dest:   [r26=0x0]
+  XOR Value: 0x0000000000000002
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+  *x26/s10     : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000069] [ACCEPTED] remuw zero, a5, a0
+--------------------------------------------------------------------------------
+  Machine Code: 0x02a7f03b (size=4)
+  PC: 0x0000000080001130 -> 0x0000000080001134
+  Source: [r15=0xffffffffffffffff, r10=0x69ea9c291a99487f]
+  Dest:   [r0=0x0]
+  XOR Value: 0x2c2ac7adcacd6f01
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x000000005e844e58
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000070] [ACCEPTED] mul ra, s10, a5
+--------------------------------------------------------------------------------
+  Machine Code: 0x02fd00b3 (size=4)
+  PC: 0x0000000080001134 -> 0x0000000080001138
+  Source: [r26=0x0, r15=0xffffffffffffffff]
+  Dest:   [r1=0x0]
+  XOR Value: 0xfffffffffffffffe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+  *x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000071] [ACCEPTED] remu zero, s1, a6
+--------------------------------------------------------------------------------
+  Machine Code: 0x0304f033 (size=4)
+  PC: 0x0000000080001138 -> 0x000000008000113c
+  Source: [r9=0xffffffffffffffff, r16=0x0]
+  Dest:   [r0=0x0]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000072] [ACCEPTED] srliw zero, t1, 12
+--------------------------------------------------------------------------------
+  Machine Code: 0x00c3501b (size=4)
+  PC: 0x000000008000113c -> 0x0000000080001140
+  Source: [r6=0x0]
+  Dest:   [r0=0x0]
+  XOR Value: 0x0000000000000018
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000073] [ACCEPTED] divuw t3, t3, zero
+--------------------------------------------------------------------------------
+  Machine Code: 0x020e5e3b (size=4)
+  PC: 0x0000000080001140 -> 0x0000000080001144
+  Source: [r28=0xc017e338bd089cb0, r0=0x0]
+  Dest:   [r28=0xffffffffffffffff]
+  XOR Value: 0xc017e338bd089cb0
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+  *x28/t3      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000074] [ACCEPTED] mulhu s6, s11, zero
+--------------------------------------------------------------------------------
+  Machine Code: 0x020dbb33 (size=4)
+  PC: 0x0000000080001144 -> 0x0000000080001148
+  Source: [r27=0x109c7391, r0=0x0]
+  Dest:   [r22=0x0]
+  XOR Value: 0x00000000109c7391
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+  *x22/s6      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000075] [ACCEPTED] mulw t1, s1, gp
+--------------------------------------------------------------------------------
+  Machine Code: 0x0234833b (size=4)
+  PC: 0x0000000080001148 -> 0x000000008000114c
+  Source: [r9=0xffffffffffffffff, r3=0x0]
+  Dest:   [r6=0x0]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+  *x6/t1       : 0x0000000000000000
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000076] [ACCEPTED] mulhsu s4, t3, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02de2a33 (size=4)
+  PC: 0x000000008000114c -> 0x0000000080001150
+  Source: [r28=0xffffffffffffffff, r13=0xffffffffd1df1d62]
+  Dest:   [r20=0xffffffffffffffff]
+  XOR Value: 0x000000005c41c53b
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+  *x20/s4      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000077] [ACCEPTED] auipc t4, 544461
+--------------------------------------------------------------------------------
+  Machine Code: 0x84ecde97 (size=4)
+  PC: 0x0000000080001150 -> 0x0000000080001154
+  Dest:   [r29=0x4ece150]
+  XOR Value: 0x0000000000084ecd
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0xffffffffffffffff
+  *x29/t4      : 0x0000000004ece150
+
+--------------------------------------------------------------------------------
+[#000078] [ACCEPTED] divw a1, a1, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02d5c5bb (size=4)
+  PC: 0x0000000080001154 -> 0x0000000080001158
+  Source: [r11=0xffffffffffffffff, r13=0xffffffffd1df1d62]
+  Dest:   [r11=0x0]
+  XOR Value: 0x000000005c41c53b
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+  *x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000079] [ACCEPTED] divw t3, s4, a1
+--------------------------------------------------------------------------------
+  Machine Code: 0x02ba4e3b (size=4)
+  PC: 0x0000000080001158 -> 0x000000008000115c
+  Source: [r20=0xffffffffffffffff, r11=0x0]
+  Dest:   [r28=0xffffffffffffffff]
+  XOR Value: 0xffffffffffffffff
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x28/t3      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000080] [ACCEPTED] mulhsu t4, a3, t4
+--------------------------------------------------------------------------------
+  Machine Code: 0x03d6aeb3 (size=4)
+  PC: 0x000000008000115c -> 0x0000000080001160
+  Source: [r13=0xffffffffd1df1d62, r29=0x4ece150]
+  Dest:   [r29=0xffffffffffffffff]
+  XOR Value: 0xffffffffd806dfc2
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x0000000000000000
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x29/t4      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000081] [ACCEPTED] mulw s0, a4, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02d7043b (size=4)
+  PC: 0x0000000080001160 -> 0x0000000080001164
+  Source: [r14=0x69ea9c291a99487f, r13=0xffffffffd1df1d62]
+  Dest:   [r8=0x6185239e]
+  XOR Value: 0x961563d6b92772bb
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+  *x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000082] [ACCEPTED] mulw a6, a4, s8
+--------------------------------------------------------------------------------
+  Machine Code: 0x0387083b (size=4)
+  PC: 0x0000000080001164 -> 0x0000000080001168
+  Source: [r14=0x69ea9c291a99487f, r24=0x0]
+  Dest:   [r16=0x0]
+  XOR Value: 0x69ea9c291a99487f
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x16/a6      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000083] [ACCEPTED] sll s6, a4, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x00d71b33 (size=4)
+  PC: 0x0000000080001168 -> 0x000000008000116c
+  Source: [r14=0x69ea9c291a99487f, r13=0xffffffffd1df1d62]
+  Dest:   [r22=0x6a6521fc00000000]
+  XOR Value: 0x961563d6b92772bb
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0xffffffffffffffff
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x22/s6      : 0x6a6521fc00000000
+
+--------------------------------------------------------------------------------
+[#000084] [ACCEPTED] slli sp, t1, 63
+--------------------------------------------------------------------------------
+  Machine Code: 0x03f31113 (size=4)
+  PC: 0x000000008000116c -> 0x0000000080001170
+  Source: [r6=0x0]
+  Dest:   [r2=0x0]
+  XOR Value: 0x000000000000007e
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+  *x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000085] [ACCEPTED] mulw t2, sp, a3
+--------------------------------------------------------------------------------
+  Machine Code: 0x02d103bb (size=4)
+  PC: 0x0000000080001170 -> 0x0000000080001174
+  Source: [r2=0x0, r13=0xffffffffd1df1d62]
+  Dest:   [r7=0x0]
+  XOR Value: 0xffffffffa3be3ac4
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+  *x7/t2       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000086] [ACCEPTED] remw s11, s11, sp
+--------------------------------------------------------------------------------
+  Machine Code: 0x022dedbb (size=4)
+  PC: 0x0000000080001174 -> 0x0000000080001178
+  Source: [r27=0x109c7391, r2=0x0]
+  Dest:   [r27=0x109c7391]
+  XOR Value: 0x00000000109c7391
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x27/s11     : 0x00000000109c7391
+
+--------------------------------------------------------------------------------
+[#000087] [ACCEPTED] divw s4, s11, s1
+--------------------------------------------------------------------------------
+  Machine Code: 0x029dca3b (size=4)
+  PC: 0x0000000080001178 -> 0x000000008000117c
+  Source: [r27=0x109c7391, r9=0xffffffffffffffff]
+  Dest:   [r20=0xffffffffef638c6f]
+  XOR Value: 0xffffffffef638c6f
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x20/s4      : 0xffffffffef638c6f
+
+--------------------------------------------------------------------------------
+[#000088] [ACCEPTED] lui a6, 566782
+--------------------------------------------------------------------------------
+  Machine Code: 0x8a5fe837 (size=4)
+  PC: 0x000000008000117c -> 0x0000000080001180
+  Dest:   [r16=0xffffffff8a5fe000]
+  XOR Value: 0x000000000008a5fe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x16/a6      : 0xffffffff8a5fe000
+
+--------------------------------------------------------------------------------
+[#000089] [ACCEPTED] rem ra, s5, s11
+--------------------------------------------------------------------------------
+  Machine Code: 0x03bae0b3 (size=4)
+  PC: 0x0000000080001180 -> 0x0000000080001184
+  Source: [r21=0x0, r27=0x109c7391]
+  Dest:   [r1=0x0]
+  XOR Value: 0x000000002138e722
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+  *x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000090] [ACCEPTED] slli s7, a1, 51
+--------------------------------------------------------------------------------
+  Machine Code: 0x03359b93 (size=4)
+  PC: 0x0000000080001184 -> 0x0000000080001188
+  Source: [r11=0x0]
+  Dest:   [r23=0x0]
+  XOR Value: 0x0000000000000066
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x69ea9c291a99487f
+   x11/a1      : 0x0000000000000000
+  *x23/s7      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000091] [ACCEPTED] mul a0, s0, s7
+--------------------------------------------------------------------------------
+  Machine Code: 0x03740533 (size=4)
+  PC: 0x0000000080001188 -> 0x000000008000118c
+  Source: [r8=0x6185239e, r23=0x0]
+  Dest:   [r10=0x0]
+  XOR Value: 0x000000006185239e
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+  *x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000092] [ACCEPTED] mulhu a3, a3, t4
+--------------------------------------------------------------------------------
+  Machine Code: 0x03d6b6b3 (size=4)
+  PC: 0x000000008000118c -> 0x0000000080001190
+  Source: [r13=0xffffffffd1df1d62, r29=0xffffffffffffffff]
+  Dest:   [r13=0xffffffffd1df1d61]
+  XOR Value: 0x000000002e20e29c
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x13/a3      : 0xffffffffd1df1d61
+
+--------------------------------------------------------------------------------
+[#000093] [ACCEPTED] divw a5, s2, a4
+--------------------------------------------------------------------------------
+  Machine Code: 0x02e947bb (size=4)
+  PC: 0x0000000080001190 -> 0x0000000080001194
+  Source: [r18=0x0, r14=0x69ea9c291a99487f]
+  Dest:   [r15=0x0]
+  XOR Value: 0xd3d53852353290fe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x15/a5      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000094] [ACCEPTED] remw s3, s9, a4
+--------------------------------------------------------------------------------
+  Machine Code: 0x02ece9bb (size=4)
+  PC: 0x0000000080001194 -> 0x0000000080001198
+  Source: [r25=0xffffffffffffffff, r14=0x69ea9c291a99487f]
+  Dest:   [r19=0xffffffffffffffff]
+  XOR Value: 0x2c2ac7adcacd6f01
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x19/s3      : 0xffffffffffffffff
+
+--------------------------------------------------------------------------------
+[#000095] [ACCEPTED] srliw s3, s10, 25
+--------------------------------------------------------------------------------
+  Machine Code: 0x019d599b (size=4)
+  PC: 0x0000000080001198 -> 0x000000008000119c
+  Source: [r26=0x0]
+  Dest:   [r19=0x0]
+  XOR Value: 0x0000000000000032
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x19/s3      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000096] [ACCEPTED] divuw a4, sp, a4
+--------------------------------------------------------------------------------
+  Machine Code: 0x02e1573b (size=4)
+  PC: 0x000000008000119c -> 0x00000000800011a0
+  Source: [r2=0x0, r14=0x69ea9c291a99487f]
+  Dest:   [r14=0x0]
+  XOR Value: 0xd3d53852353290fe
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x14/a4      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000097] [ACCEPTED] remw t2, a2, a6
+--------------------------------------------------------------------------------
+  Machine Code: 0x030663bb (size=4)
+  PC: 0x00000000800011a0 -> 0x00000000800011a4
+  Source: [r12=0x0, r16=0xffffffff8a5fe000]
+  Dest:   [r7=0x0]
+  XOR Value: 0xffffffff14bfc000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+  *x7/t2       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000098] [ACCEPTED] subw s6, a6, a5
+--------------------------------------------------------------------------------
+  Machine Code: 0x40f80b3b (size=4)
+  PC: 0x00000000800011a4 -> 0x00000000800011a8
+  Source: [r16=0xffffffff8a5fe000, r15=0x0]
+  Dest:   [r22=0xffffffff8a5fe000]
+  XOR Value: 0xffffffff8a5fe000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x22/s6      : 0xffffffff8a5fe000
+
+--------------------------------------------------------------------------------
+[#000099] [ACCEPTED] remu s11, s8, s6
+--------------------------------------------------------------------------------
+  Machine Code: 0x036c7db3 (size=4)
+  PC: 0x00000000800011a8 -> 0x00000000800011ac
+  Source: [r24=0x0, r22=0xffffffff8a5fe000]
+  Dest:   [r27=0x0]
+  XOR Value: 0xffffffff14bfc000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x27/s11     : 0x0000000000000000
+
+--------------------------------------------------------------------------------
+[#000100] [ACCEPTED] divw s4, s6, a5
+--------------------------------------------------------------------------------
+  Machine Code: 0x02fb4a3b (size=4)
+  PC: 0x00000000800011ac -> 0x00000000800011b0
+  Source: [r22=0xffffffff8a5fe000, r15=0x0]
+  Dest:   [r20=0xffffffffffffffff]
+  XOR Value: 0xffffffff8a5fe000
+
+  [Key Registers]
+   x0/zero     : 0x0000000000000000
+   x1/ra       : 0x0000000000000000
+   x2/sp       : 0x0000000000000000
+   x8/s0       : 0x000000006185239e
+   x10/a0      : 0x0000000000000000
+   x11/a1      : 0x0000000000000000
+  *x20/s4      : 0xffffffffffffffff
+
+
+================================================================================
+  END OF LOG - Total instructions: 100
+================================================================================

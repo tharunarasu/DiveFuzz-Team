@@ -18,6 +18,10 @@ from ..asm_template_manager.riscv_asm_syntex import ArchConfig
 # ISA strings for different extension profiles
 # Key: allowed_ext_name, Value: (isa_with_c, isa_without_c)
 ISA_PROFILES = {
+    "nutshell": (
+        "rv{bits}imc_zicsr_zifencei",
+        "rv{bits}im_zicsr_zifencei",
+    ),
     "cva6": (
         # CVA6: RV64GC + B + ZKN, NO Zfh/Zfhmin
         # NOTE: Use 'gc' (not 'g_c') - standard RISC-V ISA string format
@@ -80,6 +84,9 @@ class Config:
         self.instr_number = int(args.instr_number)
         self.seed_times = int(args.seeds)
         self.max_workers = max(1, int(args.max_workers))
+        self.random_seed = getattr(args, "random_seed", None)
+        self.allow_duplicates = bool(getattr(args, "allow_duplicates", False))
+        self.exclude_opcodes = list(getattr(args, "exclude_opcodes", None) or [])
 
         self.directory_path = args.seed_dir.resolve()
         self.mutate_directory = (
@@ -89,6 +96,15 @@ class Config:
 
         self.enable_ext = bool(args.enable_ext)
         self.exclude_extensions = list(args.exclude_ext)
+        if self.exclude_extensions:
+            allowed_ext.allowed_ext = [ext for ext in allowed_ext.allowed_ext
+                                       if ext not in self.exclude_extensions]
+            allowed_ext.special_probabilities = {
+                ext: probability for ext, probability in allowed_ext.special_probabilities.items()
+                if ext in allowed_ext.allowed_ext
+            }
+            if not allowed_ext.allowed_ext:
+                raise ValueError("No instruction extensions remain after --exclude-ext")
 
         # Debug configuration
         self.debug_enabled = bool(args.debug)

@@ -1,0 +1,30 @@
+# Debug mode enabled: mode=SUMMARY, filter=ACCEPTED only
+#   Output: /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_*.log
+---Start generate instrs---
+# Timeout per seed: 80.0s
+# Generating instructions:   0%|          | 0/20 [00:00<?, ?it/s]# Generating instructions:   5%|▌         | 1/20 [00:30<09:37, 30.39s/it]# Generating instructions:  10%|█         | 2/20 [00:57<08:31, 28.39s/it]# Generating instructions:  15%|█▌        | 3/20 [01:24<07:50, 27.66s/it]# Generating instructions:  20%|██        | 4/20 [01:47<06:56, 26.03s/it]# Generating instructions:  25%|██▌       | 5/20 [02:04<05:42, 22.82s/it]# Generating instructions:  30%|███       | 6/20 [02:31<05:39, 24.27s/it]# Generating instructions:  35%|███▌      | 7/20 [03:05<05:56, 27.46s/it]# Generating instructions:  40%|████      | 8/20 [03:23<04:50, 24.22s/it]# Generating instructions:  45%|████▌     | 9/20 [03:52<04:44, 25.86s/it]# Generating instructions:  50%|█████     | 10/20 [04:10<03:54, 23.45s/it]# Generating instructions:  55%|█████▌    | 11/20 [04:40<03:49, 25.48s/it]# Generating instructions:  60%|██████    | 12/20 [05:08<03:28, 26.04s/it]# Generating instructions:  65%|██████▌   | 13/20 [05:43<03:22, 28.94s/it]# Generating instructions:  70%|███████   | 14/20 [06:08<02:45, 27.64s/it]# Generating instructions:  75%|███████▌  | 15/20 [06:33<02:14, 26.99s/it]# Generating instructions:  80%|████████  | 16/20 [06:51<01:36, 24.20s/it]# Generating instructions:  85%|████████▌ | 17/20 [07:07<01:05, 21.73s/it]# Generating instructions:  90%|█████████ | 18/20 [07:40<00:50, 25.24s/it]# Generating instructions:  95%|█████████▌| 19/20 [08:05<00:24, 24.96s/it]# Generating instructions: 100%|██████████| 20/20 [08:36<00:00, 26.93s/it]# Generating instructions: 100%|██████████| 20/20 [08:36<00:00, 25.84s/it]
+[Seed 0] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_0.log
+[Seed 1] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_1.log
+[Seed 2] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_2.log
+[Seed 3] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_3.log
+[Seed 4] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_4.log
+[Seed 5] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_5.log
+[Seed 6] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_6.log
+[Seed 7] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_7.log
+[Seed 8] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_8.log
+[Seed 9] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_9.log
+[Seed 10] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_10.log
+[Seed 11] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_11.log
+[Seed 12] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_12.log
+[Seed 13] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_13.log
+[Seed 14] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_14.log
+[Seed 15] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_15.log
+[Seed 16] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_16.log
+[Seed 17] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_17.log
+[Seed 18] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_18.log
+[Seed 19] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/spike_debug_seed_19.log
+# Successfully generated: 20/20 seeds
+# Total timeouts: 0
+# Total conflict avoidances: 2000
+# Total failed conflict avoidances: 821
+# Execution time: 516.87 seconds

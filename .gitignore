@@ -25,3 +25,5 @@ evidence/**/*.elf
 evidence/**/*.img
 evidence/**/*.bloom
 .github-cli/
+evidence/final/**/*.coverage.dat
+tmp/

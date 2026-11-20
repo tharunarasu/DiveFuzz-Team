@@ -82,6 +82,9 @@ def main():
             config.stateful_xor_cache,
             config.bug_filter_enable,
             config.jump_enable,
+            config.random_seed,
+            config.allow_duplicates,
+            config.exclude_opcodes,
         )
 
         # Write ISA info for downstream tools (e.g., spike runner)

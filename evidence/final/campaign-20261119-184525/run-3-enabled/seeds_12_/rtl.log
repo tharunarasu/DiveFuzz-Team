@@ -1,0 +1,55 @@
+emu compiled at Nov 19 2026, 18:35:44
+Using simulated 32768B flash
+Using simulated 8192MB RAM
+The image is /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/corpus/seeds_12_.img
+The reference model is /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so
+The first instruction of core 0 has commited. Difftest enabled. 
+nemu does not enable flash fetch!
+dump coverage data to /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-3-enabled/seeds_12_/build/2026-11-19@19-14-16.coverage.dat...
+Core 0: [32mHIT GOOD TRAP at pc = 0x800011f0
+[0m[35minstrCnt = 393, cycleCnt = 2735, IPC = 0.143693
+[0m[34mSeed=0 Guest cycle spent: 2737 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 1950ms
+[0m======== PerfCnt =========
+                2735 <- Mcycle
+                 393 <- Minstret
+                   0 <- MultiCommit
+                1116 <- MimemStall
+                 308 <- MaluInstr
+                   1 <- MbruInstr
+                   6 <- MlsuInstr
+                  60 <- MmduInstr
+                  18 <- McsrInstr
+                   0 <- MloadInstr
+                   0 <- MmmioInstr
+                  18 <- MmulInstr
+                   3 <- MifuFlush
+                   0 <- MbpBRight
+                   0 <- MbpBWrong
+                   0 <- MbpJRight
+                   1 <- MbpJWrong
+                   0 <- MbpIRight
+                   0 <- MbpIWrong
+                   0 <- MbpRRight
+                   0 <- MbpRWrong
+                   0 <- Custom1
+                   0 <- Custom2
+                   0 <- Custom3
+                   0 <- Custom4
+                   0 <- Custom5
+                   0 <- Custom6
+                   0 <- Custom7
+                   0 <- Custom8
+                 379 <- MrawStall
+                 970 <- MexuBusy
+                   0 <- MloadStall
+                 168 <- MstoreStall
+                 398 <- ISUIssue
+======== PerfCntCSV =========
+
+Mcycle, Minstret, MultiCommit, MimemStall, MaluInstr, MbruInstr, MlsuInstr, MmduInstr, McsrInstr, MloadInstr, MmmioInstr, MmulInstr, MifuFlush, MbpBRight, MbpBWrong, MbpJRight, MbpJWrong, MbpIRight, MbpIWrong, MbpRRight, MbpRWrong, Custom1, Custom2, Custom3, Custom4, Custom5, Custom6, Custom7, Custom8, MrawStall, MexuBusy, MloadStall, MstoreStall, ISUIssue, 
+
+
+                2735,                  393,                    0,                 1116,                  308,                    1,                    6,                   60,                   18,                    0,                    0,                   18,                    3,                    0,                    0,                    0,                    1,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                  379,                  970,                    0,                  168,                  398, 
+
+

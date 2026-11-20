@@ -1,5 +1,7 @@
 # DiveFuzz: paper study and preliminary reproduction
 
+**Phase-two update:** This file preserves the preliminary checkpoint. The subsequent RTL experiments and final measurements are in [FINAL_REPORT.md](FINAL_REPORT.md).
+
 **Course project checkpoint — four sections, 25 points each**  
 **Paper:** Zihui Guo, Miaomiao Yuan, Yanqi Yang, Liwei Chen, Gang Shi, and Dan Meng, *DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction*, ACM CCS 2025, pp. 1964–1978. [DOI](https://doi.org/10.1145/3719027.3765167).  
 **Local artifact:** commit `13b028f8aaf16e4a0bb3476c2af9c866ab42353d`.  

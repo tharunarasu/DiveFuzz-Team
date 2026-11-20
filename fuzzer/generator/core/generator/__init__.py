@@ -33,6 +33,9 @@ def generate_instructions_parallel(
     stateful_xor_cache: bool = True,
     bug_filter_enable: bool = True,
     jump_enable: bool = True,
+    random_seed: int = None,
+    allow_duplicates: bool = False,
+    exclude_opcodes: list = None,
 ):
     """
     Generate random RISC-V instructions in parallel across multiple processes.
@@ -145,6 +148,9 @@ def generate_instructions_parallel(
                         debug_config,
                         bug_filter_enable,
                         jump_enable,
+                        None if random_seed is None else random_seed + seed_idx,
+                        allow_duplicates,
+                        exclude_opcodes,
                     )
                     futures[future] = seed_idx
 

@@ -67,6 +67,10 @@ def setup_divefuzz(seed_config: GeneratedSeedConfig, global_logger):
         template_type=seed_config.divefuzz.template_type,
         allowed_ext_name=seed_config.divefuzz.allowed_ext_name,
         architecture=seed_config.divefuzz.architecture,
+        random_seed=seed_config.divefuzz.random_seed,
+        allow_duplicates=seed_config.divefuzz.allow_duplicates,
+        exclude_opcodes=seed_config.divefuzz.exclude_opcodes,
+        jump_enable=seed_config.divefuzz.jump_enable,
     )
     _divefuzz_config = setup_config(divefuzz_config)
 
@@ -85,7 +89,11 @@ def run_divefuzz(seed_config: GeneratedSeedConfig, seed_config_logger) -> list:
             arch=_divefuzz_config.arch,
             template_type=seed_config.divefuzz.template_type,
             out_dir=str(_divefuzz_config.out_dir),
-            architecture=_divefuzz_config.architecture
+            architecture=_divefuzz_config.architecture,
+            jump_enable=_divefuzz_config.jump_enable,
+            random_seed=_divefuzz_config.random_seed,
+            allow_duplicates=_divefuzz_config.allow_duplicates,
+            exclude_opcodes=_divefuzz_config.exclude_opcodes,
         )
 
     elif seed_config.divefuzz.mode == "mutate":

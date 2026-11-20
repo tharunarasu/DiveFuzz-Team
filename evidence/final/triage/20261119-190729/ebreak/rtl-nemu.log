@@ -1,0 +1,58 @@
+emu compiled at Nov 19 2026, 18:35:44
+Using simulated 32768B flash
+Using simulated 8192MB RAM
+The image is /mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/ebreak/test.img
+The reference model is /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so
+The first instruction of core 0 has commited. Difftest enabled. 
+nemu does not enable flash fetch!
+
+============== Commit Group Trace (Core 0) ==============
+commit group [00]: pc 0080000000 cmtcnt 1
+commit group [01]: pc 0080000004 cmtcnt 1
+commit group [02]: pc 0080000008 cmtcnt 1 <--
+commit group [03]: pc 0000000000 cmtcnt 0
+commit group [04]: pc 0000000000 cmtcnt 0
+commit group [05]: pc 0000000000 cmtcnt 0
+commit group [06]: pc 0000000000 cmtcnt 0
+commit group [07]: pc 0000000000 cmtcnt 0
+commit group [08]: pc 0000000000 cmtcnt 0
+commit group [09]: pc 0000000000 cmtcnt 0
+commit group [10]: pc 0000000000 cmtcnt 0
+commit group [11]: pc 0000000000 cmtcnt 0
+commit group [12]: pc 0000000000 cmtcnt 0
+commit group [13]: pc 0000000000 cmtcnt 0
+commit group [14]: pc 0000000000 cmtcnt 0
+commit group [15]: pc 0000000000 cmtcnt 0
+
+============== Commit Instr Trace ==============
+[00] commit pc 0000000080000000 inst 00000297 wen 1 dst 05 data 0000000080000000 idx 000 auipc   t0, 0x0
+[01] commit pc 0000000080000004 inst 01428293 wen 1 dst 05 data 0000000080000014 idx 000 addi    t0, t0, 20
+[02] commit pc 0000000080000008 inst 30529073 wen 0 dst 00 data 0000000000000000 idx 000 csrw    mtvec, t0
+[03] exception pc 000000008000000c inst 00100073 cause 0000000000000003 ebreak <--
+
+==============  REF Regs  ==============
+  $0: 0x0000000000000000   ra: 0x7eb1d389f764b8a3   sp: 0x7eb1d389f764b8a3   gp: 0x7eb1d389f764b8a3 
+  tp: 0x7eb1d389f764b8a3   t0: 0x0000000080000014   t1: 0x7eb1d389f764b8a3   t2: 0x7eb1d389f764b8a3 
+  s0: 0x7eb1d389f764b8a3   s1: 0x7eb1d389f764b8a3   a0: 0x7eb1d389f764b8a3   a1: 0x7eb1d389f764b8a3 
+  a2: 0x7eb1d389f764b8a3   a3: 0x7eb1d389f764b8a3   a4: 0x7eb1d389f764b8a3   a5: 0x7eb1d389f764b8a3 
+  a6: 0x7eb1d389f764b8a3   a7: 0x7eb1d389f764b8a3   s2: 0x7eb1d389f764b8a3   s3: 0x7eb1d389f764b8a3 
+  s4: 0x7eb1d389f764b8a3   s5: 0x7eb1d389f764b8a3   s6: 0x7eb1d389f764b8a3   s7: 0x7eb1d389f764b8a3 
+  s8: 0x7eb1d389f764b8a3   s9: 0x7eb1d389f764b8a3  s10: 0x7eb1d389f764b8a3  s11: 0x7eb1d389f764b8a3 
+  t3: 0x7eb1d389f764b8a3   t4: 0x7eb1d389f764b8a3   t5: 0x7eb1d389f764b8a3   t6: 0x7eb1d389f764b8a3 
+pc: 0x0000000080000014 mstatus: 0x0000000a00001800 mcause: 0x0000000000000002 mepc: 0x000000008000000c
+                       sstatus: 0x0000000200000000 scause: 0x0000000000000000 sepc: 0x0000000000000000
+satp: 0x0000000000000000
+mip: 0x0000000000000000 mie: 0x0000000000000000 mscratch: 0x0000000000000000 sscratch: 0x0000000000000000
+mideleg: 0x0000000000000000 medeleg: 0x0000000000000000
+mtval: 0x0000000000000000 stval: 0x817e82fd938cbf07 mtvec: 0x0000000080000014 stvec: 0x0000000000000000
+privilege mode:3  pmp: below
+ 0: cfg:0x00 addr:0x0000000000000000| 1: cfg:0x00 addr:0x0000000000000000
+ 2: cfg:0x00 addr:0x0000000000000000| 3: cfg:0x00 addr:0x0000000000000000
+pmp csr rw: enable, pmp check: disable
+priviledgeMode: 3
+ mcause different at pc = 0x008000000c, right= 0x0000000000000002, wrong = 0x0000000000000003
+Core 0: [31mABORT at pc = 0x80000014
+[0m[35minstrCnt = 4, cycleCnt = 535, IPC = 0.007477
+[0m[34mSeed=0 Guest cycle spent: 536 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 109ms
+[0m

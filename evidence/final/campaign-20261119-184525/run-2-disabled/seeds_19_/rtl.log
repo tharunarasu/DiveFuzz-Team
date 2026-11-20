@@ -1,0 +1,55 @@
+emu compiled at Nov 19 2026, 18:35:44
+Using simulated 32768B flash
+Using simulated 8192MB RAM
+The image is /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-2-disabled/corpus/seeds_19_.img
+The reference model is /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so
+The first instruction of core 0 has commited. Difftest enabled. 
+nemu does not enable flash fetch!
+dump coverage data to /mnt/f/DiveFuzz/DiveFuzz/evidence/final/campaign-20261119-184525/run-2-disabled/seeds_19_/build/2026-11-19@18-57-43.coverage.dat...
+Core 0: [32mHIT GOOD TRAP at pc = 0x800011f0
+[0m[35minstrCnt = 394, cycleCnt = 6147, IPC = 0.064096
+[0m[34mSeed=0 Guest cycle spent: 6149 (this will be different from cycleCnt if emu loads a snapshot)
+[0m[34mHost time spent: 2007ms
+[0m======== PerfCnt =========
+                6147 <- Mcycle
+                 394 <- Minstret
+                   0 <- MultiCommit
+                4318 <- MimemStall
+                 298 <- MaluInstr
+                   1 <- MbruInstr
+                  16 <- MlsuInstr
+                  41 <- MmduInstr
+                  18 <- McsrInstr
+                  13 <- MloadInstr
+                   0 <- MmmioInstr
+                  11 <- MmulInstr
+                  23 <- MifuFlush
+                   0 <- MbpBRight
+                   0 <- MbpBWrong
+                   0 <- MbpJRight
+                   1 <- MbpJWrong
+                   0 <- MbpIRight
+                   0 <- MbpIWrong
+                   0 <- MbpRRight
+                   0 <- MbpRWrong
+                   0 <- Custom1
+                   0 <- Custom2
+                   0 <- Custom3
+                   0 <- Custom4
+                   0 <- Custom5
+                   0 <- Custom6
+                   0 <- Custom7
+                   0 <- Custom8
+                 187 <- MrawStall
+                1362 <- MexuBusy
+                 220 <- MloadStall
+                  89 <- MstoreStall
+                 423 <- ISUIssue
+======== PerfCntCSV =========
+
+Mcycle, Minstret, MultiCommit, MimemStall, MaluInstr, MbruInstr, MlsuInstr, MmduInstr, McsrInstr, MloadInstr, MmmioInstr, MmulInstr, MifuFlush, MbpBRight, MbpBWrong, MbpJRight, MbpJWrong, MbpIRight, MbpIWrong, MbpRRight, MbpRWrong, Custom1, Custom2, Custom3, Custom4, Custom5, Custom6, Custom7, Custom8, MrawStall, MexuBusy, MloadStall, MstoreStall, ISUIssue, 
+
+
+                6147,                  394,                    0,                 4318,                  298,                    1,                   16,                   41,                   18,                   13,                    0,                   11,                   23,                    0,                    0,                    0,                    1,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                    0,                  187,                 1362,                  220,                   89,                  423, 
+
+

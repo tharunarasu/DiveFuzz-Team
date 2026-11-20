@@ -53,6 +53,10 @@ class DiveFuzzConfig:
     allowed_ext_name: str = 'base'
     # Architecture for bug filtering: 'xs' (XiangShan), 'nts' (NutShell), 'rkt' (Rocket), 'kmh' (Kunminghu)
     architecture: str = 'xs'
+    random_seed: Optional[int] = None
+    allow_duplicates: bool = False
+    exclude_opcodes: Optional[List[str]] = None
+    jump_enable: bool = True
 
     # generate mode fields
     seeds_num: int = 10

@@ -1,0 +1,39 @@
+2026-11-19 19:13:23 - INFO - Successfully loaded configuration from /mnt/f/DiveFuzz/DiveFuzz/evidence/final/checks/runner-nutshell.json
+2026-11-19 19:13:23 - INFO - Starting tests for DUT: NutShell
+2026-11-19 19:13:23 - INFO - Number of seed configurations: 1
+2026-11-19 19:13:23 - INFO - Parallel threads per configuration: 1
+2026-11-19 19:13:23 - INFO - Start time: 2026-11-19 19:13:23
+2026-11-19 19:13:23 - INFO - Running seed configuration: rtl-pilot
+2026-11-19 19:13:23 - INFO - Running 1 seed(s) with 1 threads
+2026-11-19 19:13:25 - INFO - 
++--------------------------------------------------------------------------+
+| NutShell                                                                 |
+|    Version: 63a2687                                                      |
+|    Ref: "NEMU"                                                           |
+| ======================================================================== |
+| ✓ Passed!                                                                |
+|   DUT command completed successfully                                     |
+|                                                                          |
+|   Log: outputs/rtl-pilot-rtl-pilot_seeds_0_.img.log                      |
++--------------------------------------------------------------------------+
+2026-11-19 19:13:25 - INFO - Detailed log saved to: outputs/rtl-pilot-rtl-pilot_seeds_0_.img.log
+2026-11-19 19:13:25 - INFO - End time: 2026-11-19 19:13:25
+2026-11-19 19:13:25 - INFO - 
+2026-11-19 19:13:25 - INFO - 
++-------------------------------------------------------------------+
+|                                                                   |
+| TEST SUMMARY                                                      |
+|                                                                   |
+| DUT: NutShell (NEMU) 63a2687                                      |
+|                                                                   |
+| [==================================================] 100.0% (1/1) |
+|                                                                   |
+| Testing completed:                                                |
+|   1 passed,                                                       |
+|   0 failed,                                                       |
+|   0 with issues.                                                  |
+|                                                                   |
+| ✓ Overall: All tests passed successfully                          |
++-------------------------------------------------------------------+
+2026-11-19 19:13:25 - INFO - 
+2026-11-19 19:13:25 - INFO - Testing completed: 1 passed, 0 failed, 0 timed out, 0 errors. Total: 1. Duration: 1.787 s

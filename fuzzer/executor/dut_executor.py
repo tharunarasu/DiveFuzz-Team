@@ -64,7 +64,7 @@ def run_single_seed(seed_path: str, seed_name: str, dut_config: DUTTarget, seed_
             # Parse result
             if result.returncode == 0:
                 result_type = ResultType.SUCCESS
-                summary = "No differences to reference and no errors"
+                summary = "DUT command completed successfully"
             else:
                 result_type = ResultType.FAILURE
                 summary = f"Exited with code {result.returncode}"

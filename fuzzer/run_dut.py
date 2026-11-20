@@ -18,6 +18,7 @@ import sys
 from config.logger_config import get_global_logger, create_output_dir
 from config.dut_config import Config
 from executor.dut_executor import run_dut_tests
+from utils.results_reporter import ResultType
 
 def main():
     parser = argparse.ArgumentParser(description="Run DUT tests using seed files")
@@ -33,12 +34,12 @@ def main():
         global_logger.info(f"Successfully loaded configuration from {args.config}")
         
         # run tests
-        run_dut_tests(config, args.config)
+        results = run_dut_tests(config, args.config)
+        return 0 if results and all(r.result_type == ResultType.SUCCESS for r in results) else 1
         
     except FileNotFoundError as e:
         global_logger.error(f"Config file not found: {e}")
         return 1
 
 if __name__ == "__main__":
-    # sys.exit(main())
-    main()
+    sys.exit(main())

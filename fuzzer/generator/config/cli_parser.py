@@ -29,6 +29,12 @@ def create_parser():
         "--mutation", action="store_true", help="Enable mutation process"
     )
     parser.add_argument("--generate", action="store_true", help="Enable generate")
+    parser.add_argument("--random-seed", type=int, default=None,
+                        help="Reproducible base RNG seed (use one worker for controlled experiments)")
+    parser.add_argument("--allow-duplicates", action="store_true",
+                        help="Keep runtime validation but disable duplicate-signature rejection")
+    parser.add_argument("--exclude-opcodes", nargs="*", default=[],
+                        help="Exclude named opcodes from generation for a scoped experiment")
 
     # —— Target Platform / Configuration ——
     parser.add_argument("--rv32", action="store_true", help="RV32 environments (RV32)")

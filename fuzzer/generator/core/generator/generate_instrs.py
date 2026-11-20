@@ -245,6 +245,9 @@ def generate_instructions(
     debug_config: dict = None,
     bug_filter_enable: bool = True,
     jump_enable: bool = True,
+    random_seed: int = None,
+    allow_duplicates: bool = False,
+    exclude_opcodes: list = None,
 ):
     """
     Generate random RISC-V instructions for a single seed.
@@ -261,6 +264,10 @@ def generate_instructions(
         architecture: Architecture for bug filtering ('xs', 'nts', 'rkt', 'kmh')
         debug_config: Debug configuration dict (see generate_instructions_parallel)
     """
+
+    if random_seed is not None:
+        random.seed(random_seed)
+        np.random.seed(random_seed % (2 ** 32))
 
     # Create fresh template instance for this seed with random type and values
     # This ensures each seed gets independent random content (MSTATUS, register init, etc.)
@@ -296,7 +303,7 @@ def generate_instructions(
                     register_architecture_filters(architecture, precision_registry)
                     validator = InstructionValidator(
                         spike_session=spike_session,
-                        xor_cache=xor_cache,
+                        xor_cache=None if allow_duplicates else xor_cache,
                         architecture=architecture,
                         encoder=encoder,
                         precision_registry=precision_registry,
@@ -471,7 +478,16 @@ def generate_instructions(
 
                     instrs_filter = [
                         instr for instr in instrs if not instr.startswith("c.")
+                        and instr not in (exclude_opcodes or [])
                     ]
+                    # The generic CSR group also contains F-only aliases such as
+                    # fsrm/frflags. NutShell has no FPU, so these cannot be assembled
+                    # for its configured ISA even though the generic encoder knows them.
+                    if template_type == "nutshell":
+                        instrs_filter = [
+                            instr for instr in instrs_filter
+                            if not instr.startswith("f") or instr.startswith("fence")
+                        ]
                     if instrs_filter:
                         instr = random.choice(instrs_filter)
                     else:

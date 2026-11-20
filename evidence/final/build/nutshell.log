@@ -1,0 +1,152 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/mnt/f/DiveFuzz/DiveFuzz/.local/java-home -Djava.io.tmpdir=/mnt/f/DiveFuzz/DiveFuzz/.local/tmp -Xmx4g
+openjdk version "17.0.21.1" 2026-11-17
+OpenJDK Runtime Environment Temurin-17.0.21.1+2 (build 17.0.21.1+2)
+OpenJDK 64-Bit Server VM Temurin-17.0.21.1+2 (build 17.0.21.1+2, mixed mode, sharing)
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/mnt/f/DiveFuzz/DiveFuzz/.local/java-home -Djava.io.tmpdir=/mnt/f/DiveFuzz/DiveFuzz/.local/tmp -Xmx4g
+Mill Build Tool version 0.11.2
+Java version: 17.0.21.1, vendor: Eclipse Adoptium, runtime: /mnt/f/DiveFuzz/DiveFuzz/.local/jdk17
+Default locale: en, platform encoding: UTF-8
+OS name: "Linux", version: 6.6.87.2-microsoft-standard-WSL2, arch: amd64
+Verilator 5.052 2026-09-05 rev v5.052
+mkdir -p /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build
+mill -i generator[3.6.0].test.runMain top.TopMain -td /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build BOARD=sim   CORE=inorder   --output-file SimTop.v
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/mnt/f/DiveFuzz/DiveFuzz/.local/java-home -Djava.io.tmpdir=/mnt/f/DiveFuzz/DiveFuzz/.local/tmp -Xmx4g
+Preparing Java 17.0.21.1 runtime; this may take a minute or two ...
+[info] compiling 1 Scala source to /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/out/mill-build/compile.dest/classes ...
+[info] done compiling
+[info] compiling 6 Scala sources to /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/out/difftest/3.6.0/compile.dest/classes ...
+[warn] 1 deprecation (since Chisel 3.6); re-run with -deprecation for details
+[warn] 47 feature warnings; re-run with -feature for details
+[warn] two warnings found
+[info] done compiling
+[info] compiling 76 Scala sources to /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/out/chiselModule/3.6.0/compile.dest/classes ...
+[warn] 2 deprecations (since Chisel 3.6); re-run with -deprecation for details
+[warn] 2102 feature warnings; re-run with -feature for details
+[warn] two warnings found
+[info] done compiling
+[info] compiling 1 Scala source to /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/out/generator/3.6.0/compile.dest/classes ...
+[warn] 2 deprecations (since Chisel 3.6); re-run with -deprecation for details
+[warn] one warning found
+[info] done compiling
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/mnt/f/DiveFuzz/DiveFuzz/.local/java-home -Djava.io.tmpdir=/mnt/f/DiveFuzz/DiveFuzz/.local/tmp -Xmx4g
+====== Settings = (sim, inorder) ======
+EnableDebug = true
+EnableILA = true
+EnableMultiIssue = false
+EnableOutOfOrderExec = false
+EnableRVC = true
+FPGAPlatform = false
+HasDTLB = true
+HasDcache = true
+HasITLB = true
+HasIcache = true
+HasL2cache = true
+HasPrefetch = true
+IsRV32 = false
+MMIOBase = 0x40000000
+MMIOSize = 0x40000000
+MemMapBase = 0x0
+MemMapRegionBits = 0
+MmodeOnly = false
+NrExtIntr = 1
+ResetVector = 0x80000000
+[[33mwarn[0m] src/main/scala/nutcore/backend/fu/CSR.scala:652:22: Dynamic index with width 4 is too small for extractee of width 64
+[[33mwarn[0m]   val delegS = (deleg(causeNO(3,0))) && (priviledgeMode < ModeM)
+[[33mwarn[0m]                      ^
+[[33mwarn[0m] There were [33m1 warning(s)[0m during hardware elaboration.
+make -C ./difftest emu WITH_CHISELDB=0 WITH_CONSTANTIN=0
+make[1]: Entering directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest'
+Thu, 19 Nov 2026 18:35:35 -0600
+time -a -o /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/time.log verilator --exe --cc -O3 --top-module SimTop +define+VERILATOR=1 +define+PRINTF_COND=1 +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_DELAY=0 -Wno-STMTDLY -Wno-WIDTH --assert --x-assign unique --stats-vars --output-split 30000 --output-split-cfuncs 30000 -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build -CFLAGS "-I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/config -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/generated-src -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/plugin/include -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/plugin/spikedasm -I/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator -DVERILATOR -DNUM_CORES=1 --std=c++17 -DVERILATOR_4_210" -LDFLAGS "-lz -ldl" -o /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu +define+DIFFTEST --instr-count-dpi 1 --no-timing +define+VERILATOR_5 --coverage-line --coverage-toggle -Mdir /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu-compile /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/SimTop.v /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/vsrc/common/assert.v /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/vsrc/common/ref.v /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/vsrc/common/SimJTAG.v /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/compress.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/coverage.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/device.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/flash.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/golden.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/keyboard.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/lightsss.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/main.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/ram.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/remote_bitbang.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/sdcard.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/SimJTAG.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/uart.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/vga.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/generated-src/difftest-dpic.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/difftest.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/difftrace.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/goldenmem.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/refproxy.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/plugin/spikedasm/spikedasm.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator/emu.cpp /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator/snapshot.cpp
+- V e r i l a t i o n   R e p o r t: Verilator 5.052 2026-09-05 rev v5.052
+- Verilator: Built from 5.758 MB sources in 112 modules, into 20.635 MB in 15 C++ files needing 0.020 MB
+- Verilator: Walltime 3.566 s (elab=0.200, cvt=1.471, bld=0.000); cpu 1.974 s on 1 threads; allocated 158.281 MB
+make[2]: Entering directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest'
+Thu, 19 Nov 2026 18:35:40 -0600
+time -a -o /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/time.log make -s VM_PARALLEL_BUILDS=1 OPT_FAST="-O3" -C /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu-compile -f VSimTop.mk 
+make[3]: Entering directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu-compile'
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:21,
+                 from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.cpp:16:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h: In member function ‘void SimStats::display()’:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:32:28: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘SimExitCode’ [-Wformat=]
+   32 | #define ANSI_COLOR_GREEN   "\x1b[32m"
+      |                            ^
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:39:41: note: in expansion of macro ‘ANSI_COLOR_GREEN’
+   39 | #define eprintf(...) fprintf(stdout, ## __VA_ARGS__)
+      |                                         ^~~~~~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:34:3: note: in expansion of macro ‘eprintf’
+   34 |   eprintf(ANSI_COLOR_GREEN s ANSI_COLOR_RESET, ##__VA_ARGS__)
+      |   ^~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:5: note: in expansion of macro ‘simstats_display’
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |     ^~~~~~~~~~~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:34: note: format string is defined here
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |                                 ~^
+      |                                  |
+      |                                  int
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/main.cpp:17:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h: In member function ‘void SimStats::display()’:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:32:28: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘SimExitCode’ [-Wformat=]
+   32 | #define ANSI_COLOR_GREEN   "\x1b[32m"
+      |                            ^
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:39:41: note: in expansion of macro ‘ANSI_COLOR_GREEN’
+   39 | #define eprintf(...) fprintf(stdout, ## __VA_ARGS__)
+      |                                         ^~~~~~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:34:3: note: in expansion of macro ‘eprintf’
+   34 |   eprintf(ANSI_COLOR_GREEN s ANSI_COLOR_RESET, ##__VA_ARGS__)
+      |   ^~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:5: note: in expansion of macro ‘simstats_display’
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |     ^~~~~~~~~~~~~~~~
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/main.cpp:18:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:34: note: format string is defined here
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |                                 ~^
+      |                                  |
+      |                                  int
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/difftest.h:21,
+                 from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/difftest.cpp:17:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h: In member function ‘void SimStats::display()’:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:32:28: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘SimExitCode’ [-Wformat=]
+   32 | #define ANSI_COLOR_GREEN   "\x1b[32m"
+      |                            ^
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:39:41: note: in expansion of macro ‘ANSI_COLOR_GREEN’
+   39 | #define eprintf(...) fprintf(stdout, ## __VA_ARGS__)
+      |                                         ^~~~~~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:34:3: note: in expansion of macro ‘eprintf’
+   34 |   eprintf(ANSI_COLOR_GREEN s ANSI_COLOR_RESET, ##__VA_ARGS__)
+      |   ^~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:5: note: in expansion of macro ‘simstats_display’
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |     ^~~~~~~~~~~~~~~~
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/difftest/difftest.cpp:19:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:34: note: format string is defined here
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |                                 ~^
+      |                                  |
+      |                                  int
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator/emu.h:21,
+                 from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator/emu.cpp:17:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h: In member function ‘void SimStats::display()’:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:32:28: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘SimExitCode’ [-Wformat=]
+   32 | #define ANSI_COLOR_GREEN   "\x1b[32m"
+      |                            ^
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/common.h:39:41: note: in expansion of macro ‘ANSI_COLOR_GREEN’
+   39 | #define eprintf(...) fprintf(stdout, ## __VA_ARGS__)
+      |                                         ^~~~~~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:34:3: note: in expansion of macro ‘eprintf’
+   34 |   eprintf(ANSI_COLOR_GREEN s ANSI_COLOR_RESET, ##__VA_ARGS__)
+      |   ^~~~~~~
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:5: note: in expansion of macro ‘simstats_display’
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |     ^~~~~~~~~~~~~~~~
+In file included from /mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/verilator/emu.h:22:
+/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest/src/test/csrc/common/dut.h:111:34: note: format string is defined here
+  111 |     simstats_display("ExitCode: %d\n", exit_code);
+      |                                 ~^
+      |                                  |
+      |                                  int
+make[3]: Leaving directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu-compile'
+make[2]: Leaving directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest'
+make[1]: Leaving directory '/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/difftest'

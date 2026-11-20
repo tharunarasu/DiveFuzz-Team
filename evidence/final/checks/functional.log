@@ -1,0 +1,10 @@
+test_integer_profile_and_explicit_exclusions (__main__.FunctionalChecks.test_integer_profile_and_explicit_exclusions) ... ok
+test_invalid_assembly_is_an_error (__main__.FunctionalChecks.test_invalid_assembly_is_an_error) ... /mnt/f/DiveFuzz/DiveFuzz/.local/tmp/tmp80xf3usb/bad.S: Assembler messages:
+/mnt/f/DiveFuzz/DiveFuzz/.local/tmp/tmp80xf3usb/bad.S:1: Error: unrecognized opcode `this_is_not_a_riscv_instruction'
+ok
+test_runner_process_reports_failure (__main__.FunctionalChecks.test_runner_process_reports_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 9.751s
+
+OK

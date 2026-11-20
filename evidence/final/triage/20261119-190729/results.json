@@ -1,0 +1,206 @@
+[
+  {
+    "name": "arithmetic",
+    "expected_cause": null,
+    "spike": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/build/spike",
+        "--isa=rv64imc_zicsr_zifencei",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/arithmetic/test.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.1293,
+      "log": "evidence/final/triage/20261119-190729/arithmetic/spike.log"
+    },
+    "rtl_alone": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/arithmetic/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--no-diff"
+      ],
+      "returncode": 0,
+      "seconds": 1.7757,
+      "log": "evidence/final/triage/20261119-190729/arithmetic/rtl-alone.log"
+    },
+    "rtl_nemu": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/arithmetic/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--diff",
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so"
+      ],
+      "returncode": 0,
+      "seconds": 1.7289,
+      "log": "evidence/final/triage/20261119-190729/arithmetic/rtl-nemu.log"
+    },
+    "rtl_good_trap": true,
+    "reference_disagreement": false
+  },
+  {
+    "name": "ebreak",
+    "expected_cause": 3,
+    "spike": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/build/spike",
+        "--isa=rv64imc_zicsr_zifencei",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/ebreak/test.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.0766,
+      "log": "evidence/final/triage/20261119-190729/ebreak/spike.log"
+    },
+    "rtl_alone": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/ebreak/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--no-diff"
+      ],
+      "returncode": 0,
+      "seconds": 1.4812,
+      "log": "evidence/final/triage/20261119-190729/ebreak/rtl-alone.log"
+    },
+    "rtl_nemu": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/ebreak/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--diff",
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so"
+      ],
+      "returncode": 1,
+      "seconds": 1.5237,
+      "log": "evidence/final/triage/20261119-190729/ebreak/rtl-nemu.log"
+    },
+    "rtl_good_trap": true,
+    "reference_disagreement": true
+  },
+  {
+    "name": "readonly-counter",
+    "expected_cause": 2,
+    "spike": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/build/spike",
+        "--isa=rv64imc_zicsr_zifencei",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/readonly-counter/test.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.0421,
+      "log": "evidence/final/triage/20261119-190729/readonly-counter/spike.log"
+    },
+    "rtl_alone": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/readonly-counter/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--no-diff"
+      ],
+      "returncode": 0,
+      "seconds": 1.4718,
+      "log": "evidence/final/triage/20261119-190729/readonly-counter/rtl-alone.log"
+    },
+    "rtl_nemu": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/readonly-counter/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--diff",
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so"
+      ],
+      "returncode": 0,
+      "seconds": 1.4713,
+      "log": "evidence/final/triage/20261119-190729/readonly-counter/rtl-nemu.log"
+    },
+    "rtl_good_trap": true,
+    "reference_disagreement": false
+  },
+  {
+    "name": "odd-pmpcfg",
+    "expected_cause": 2,
+    "spike": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/ref/riscv-isa-sim-adapter/build/spike",
+        "--isa=rv64imc_zicsr_zifencei",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/odd-pmpcfg/test.elf"
+      ],
+      "returncode": 0,
+      "seconds": 0.1399,
+      "log": "evidence/final/triage/20261119-190729/odd-pmpcfg/spike.log"
+    },
+    "rtl_alone": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/odd-pmpcfg/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--no-diff"
+      ],
+      "returncode": 1,
+      "seconds": 1.6186,
+      "log": "evidence/final/triage/20261119-190729/odd-pmpcfg/rtl-alone.log"
+    },
+    "rtl_nemu": {
+      "command": [
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/build/emu",
+        "-i",
+        "/mnt/f/DiveFuzz/DiveFuzz/evidence/final/triage/20261119-190729/odd-pmpcfg/test.img",
+        "-C",
+        "10000",
+        "-b",
+        "0",
+        "-e",
+        "0",
+        "--diff",
+        "/mnt/f/DiveFuzz/DiveFuzz/dut/NutShell/ready-to-run/riscv64-nemu-interpreter-so"
+      ],
+      "returncode": 1,
+      "seconds": 1.6331,
+      "log": "evidence/final/triage/20261119-190729/odd-pmpcfg/rtl-nemu.log"
+    },
+    "rtl_good_trap": false,
+    "reference_disagreement": false
+  }
+]

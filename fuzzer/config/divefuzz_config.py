@@ -32,6 +32,12 @@ class DiveFuzzArgConfig:
     instr_number: int = 200
     seeds: int = 10
     max_workers: int = (os.cpu_count() or 20)
+    random_seed: int = None
+    allow_duplicates: bool = False
+    exclude_opcodes: List[str] = field(default_factory=list)
+    stateful_xor_cache: bool = True
+    bug_filter_enable: bool = True
+    jump_enable: bool = True
 
     prefix = "out"
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
