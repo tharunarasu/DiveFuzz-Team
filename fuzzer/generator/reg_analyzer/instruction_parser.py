@@ -110,7 +110,7 @@ class InstructionParser:
         ],
 
         InstructionType.SINGLE_RS_IMM: [
-            "addi", "slti", "sltiu", "xori", "ori", "andi", "slli", "srli", "srai", "slliw", "srliw", "sraiw",
+            "addi", "addiw", "slti", "sltiu", "xori", "ori", "andi", "slli", "srli", "srai", "slliw", "srliw", "sraiw",
             "c.addi", "c.andi", "c.addiw", "c.slli", "c.srli", "c.srai", "rori", "roriw", "aes64ks1i"
         ],
 

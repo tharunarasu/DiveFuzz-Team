@@ -12,8 +12,12 @@ from generator.config.cli_parser import create_parser
 from generator.config.config_manager import setup_config
 from generator.asm_template_manager.ext_list import allowed_ext
 from utils.elf_to_img import process_file
+from generator.reg_analyzer.instruction_parser import InstructionParser
 
 class FunctionalChecks(unittest.TestCase):
+    def test_addiw_registers_and_immediate(self):
+        self.assertEqual(InstructionParser.parse_instruction_full('addiw a1, a1, -363'),
+                         ('addiw', [11], [11], -363))
     def test_integer_profile_and_explicit_exclusions(self):
         args = create_parser().parse_args(['--generate', '--allowed-ext-name', 'nutshell',
             '--template-type', 'nutshell', '--architecture', 'nutshell', '--random-seed', '501',

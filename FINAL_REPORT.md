@@ -37,7 +37,7 @@ The comparison used the NutShell RV64IMC profile with CSR generation, ecall, ebr
 
 ## Full Results
 
-Across six runs, 120 of 120 generated seeds reached a good trap while checked against NEMU. Each run generated and compiled 20 of 20 requested seeds, with 100 accepted workload instructions per seed and 2,000 per run. Mean generation time was 413.3 seconds with filtering enabled and 34.2 seconds disabled. Each run covered 606 of 702 line points. Mean toggle coverage was 71.34% enabled and 71.03% disabled, out of 213,316 toggle points.
+Across six runs, 120 of 120 generated seeds reached a good trap while checked against NEMU. Each run generated and compiled 20 of 20 requested seeds, with 100 accepted workload instructions per seed and 2,000 per run. Mean generation time was 413.3 seconds with filtering enabled and 34.2 seconds disabled. Each run covered 606 of 702 line points. Mean toggle coverage was 71.34% enabled and 71.03% disabled, out of 213,316 toggle points. A later audit found that the parser omitted addiw destination values in these original logs. The unique-pair counts below are therefore counts from an incomplete logged subset and may be biased. The Figure 6 experiment below uses the corrected parser.
 
 | Run | Filter | Pass | Unique pairs | Line | Toggle | Gen. sec | RTL sec |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ Across six runs, 120 of 120 generated seeds reached a good trap while checked ag
 
 ## Insights
 
-The average number of distinct observed write-back pairs was 947.3 with duplicate filtering enabled and 449.0 with it disabled, a ratio of 2.11. This is directionally consistent with the paper’s claim of increased write-back diversity [1]. However, all six runs reached the same line coverage, and the enabled condition took longer to generate the fixed-size corpus. These measurements cannot establish the paper’s reported coverage-speed advantages: our experiment uses one CPU, a restricted workload, an ablation baseline, and different metrics and budgets. Initialization activity, short runs, and different reference models may also affect coverage.
+The earlier run logged an average of 947.3 distinct observed write-back pairs with duplicate filtering enabled and 449.0 with it disabled, a ratio of 2.11 for the recorded subset. The addiw logging omission affects comparability, so this ratio must not be treated as a reliable estimate for all write-backs. All six runs reached the same line coverage, and the enabled condition took longer to generate the fixed-size corpus. These measurements cannot establish the paper’s reported coverage-speed advantages: our experiment uses one CPU, a restricted workload, an ablation baseline, and different metrics and budgets. Initialization activity, short runs, and different reference models may also affect coverage.
 
 ## Exception triage
 
@@ -58,11 +58,11 @@ A separate ebreak test completed successfully under Spike and under NutShell wit
 
 ## Discussion
 
-Original paper: its reported evaluation covers four open-source RISC-V CPUs and the authors’ selected baselines, coverage metrics, and experimental conditions. Generalization to other architectures and post-silicon behavior requires additional study. The full paper was not accessible during this reproduction, so its exact metric definitions and experimental conditions could not be independently checked beyond the abstract [1]. Student implementation: the comparison covers one CPU revision, one host, and a small restricted workload. Compressed control-flow generation, CSR fuzzing, and full paper baselines were excluded from the main comparison. Matching RNG seeds do not produce identical instruction streams once filtering causes different retries. Coverage includes reset and initialization activity. We did not measure time to a common coverage threshold or confirm any new bug.
+Original paper: its reported evaluation covers four open-source RISC-V CPUs and the authors’ selected baselines, coverage metrics, and experimental conditions. Generalization to other architectures and post-silicon behavior requires additional study. The authors measured control-register, mux, line, ready/valid and toggle coverage on Rocket, whereas our coverage results use NutShell. Student implementation: the comparison covers one CPU revision, one host, and a small restricted workload. Compressed control-flow generation, CSR fuzzing, and full paper baselines were excluded from the main comparison. Matching RNG seeds do not produce identical instruction streams once filtering causes different retries. Coverage includes reset and initialization activity. We did not measure time to a common coverage threshold or confirm any new bug.
 
 ## Conclusion
 
-We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. Duplicate filtering increased observed opcode/write-back diversity in this sample but did not increase measured line coverage and incurred more generation time. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
+We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. The original coverage runs reached the same measured line coverage and filtering incurred more generation time. Their write-back diversity counts have the logging limitation described above. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
 
 ## References
 
