@@ -1,0 +1,282 @@
+{
+  "paper": {
+    "figure": 6,
+    "page": 8,
+    "reported_divefuzz_repetition_percent_approx": 55,
+    "paper_instruction_scale": "up to 2,000,000",
+    "baseline": "DifuzzRTL and Cascade"
+  },
+  "our_campaign": "evidence/final/pilot-20261119-202849",
+  "runs": [
+    {
+      "repeat": 1,
+      "mode": "enabled",
+      "rng_seed": 1001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 456,
+      "unique_opcode_value_pairs": 241,
+      "repetition_percent": 47.14912280701754,
+      "addiw_events": 8,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 86,
+          "unique_opcode_value_pairs": 68,
+          "repetition_percent": 20.93023255813954
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 178,
+          "unique_opcode_value_pairs": 113,
+          "repetition_percent": 36.51685393258427
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 273,
+          "unique_opcode_value_pairs": 161,
+          "repetition_percent": 41.02564102564102
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 361,
+          "unique_opcode_value_pairs": 201,
+          "repetition_percent": 44.32132963988919
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 456,
+          "unique_opcode_value_pairs": 241,
+          "repetition_percent": 47.14912280701754
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "mode": "disabled",
+      "rng_seed": 1001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 345,
+      "unique_opcode_value_pairs": 149,
+      "repetition_percent": 56.811594202898554,
+      "addiw_events": 6,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 67,
+          "unique_opcode_value_pairs": 52,
+          "repetition_percent": 22.388059701492537
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 140,
+          "unique_opcode_value_pairs": 86,
+          "repetition_percent": 38.57142857142857
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 206,
+          "unique_opcode_value_pairs": 102,
+          "repetition_percent": 50.48543689320388
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 279,
+          "unique_opcode_value_pairs": 123,
+          "repetition_percent": 55.91397849462365
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 345,
+          "unique_opcode_value_pairs": 149,
+          "repetition_percent": 56.811594202898554
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "disabled",
+      "rng_seed": 2001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 374,
+      "unique_opcode_value_pairs": 161,
+      "repetition_percent": 56.95187165775402,
+      "addiw_events": 6,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 75,
+          "unique_opcode_value_pairs": 56,
+          "repetition_percent": 25.33333333333333
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 153,
+          "unique_opcode_value_pairs": 97,
+          "repetition_percent": 36.60130718954249
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 223,
+          "unique_opcode_value_pairs": 116,
+          "repetition_percent": 47.98206278026906
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 297,
+          "unique_opcode_value_pairs": 143,
+          "repetition_percent": 51.85185185185186
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 374,
+          "unique_opcode_value_pairs": 161,
+          "repetition_percent": 56.95187165775402
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "enabled",
+      "rng_seed": 2001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 462,
+      "unique_opcode_value_pairs": 246,
+      "repetition_percent": 46.753246753246756,
+      "addiw_events": 6,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 91,
+          "unique_opcode_value_pairs": 67,
+          "repetition_percent": 26.37362637362637
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 191,
+          "unique_opcode_value_pairs": 129,
+          "repetition_percent": 32.460732984293195
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 281,
+          "unique_opcode_value_pairs": 167,
+          "repetition_percent": 40.569395017793596
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 374,
+          "unique_opcode_value_pairs": 207,
+          "repetition_percent": 44.6524064171123
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 462,
+          "unique_opcode_value_pairs": 246,
+          "repetition_percent": 46.753246753246756
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "mode": "enabled",
+      "rng_seed": 3001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 458,
+      "unique_opcode_value_pairs": 275,
+      "repetition_percent": 39.956331877729255,
+      "addiw_events": 18,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 90,
+          "unique_opcode_value_pairs": 77,
+          "repetition_percent": 14.444444444444448
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 178,
+          "unique_opcode_value_pairs": 136,
+          "repetition_percent": 23.59550561797753
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 269,
+          "unique_opcode_value_pairs": 182,
+          "repetition_percent": 32.34200743494424
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 362,
+          "unique_opcode_value_pairs": 222,
+          "repetition_percent": 38.67403314917127
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 458,
+          "unique_opcode_value_pairs": 275,
+          "repetition_percent": 39.956331877729255
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "mode": "disabled",
+      "rng_seed": 3001,
+      "generated": 5,
+      "passed": 5,
+      "accepted_instructions": 500,
+      "logged_writebacks": 362,
+      "unique_opcode_value_pairs": 174,
+      "repetition_percent": 51.93370165745856,
+      "addiw_events": 13,
+      "timeline": [
+        {
+          "accepted_instructions": 100,
+          "logged_writebacks": 67,
+          "unique_opcode_value_pairs": 59,
+          "repetition_percent": 11.940298507462687
+        },
+        {
+          "accepted_instructions": 200,
+          "logged_writebacks": 136,
+          "unique_opcode_value_pairs": 98,
+          "repetition_percent": 27.941176470588236
+        },
+        {
+          "accepted_instructions": 300,
+          "logged_writebacks": 211,
+          "unique_opcode_value_pairs": 127,
+          "repetition_percent": 39.81042654028436
+        },
+        {
+          "accepted_instructions": 400,
+          "logged_writebacks": 284,
+          "unique_opcode_value_pairs": 148,
+          "repetition_percent": 47.887323943661976
+        },
+        {
+          "accepted_instructions": 500,
+          "logged_writebacks": 362,
+          "unique_opcode_value_pairs": 174,
+          "repetition_percent": 51.93370165745856
+        }
+      ]
+    }
+  ],
+  "mean_repetition_percent": {
+    "enabled": 44.61956714599785,
+    "disabled": 55.23238917270371
+  },
+  "formula": "100 * (1 - distinct (opcode, value) pairs / logged non-x0 integer-register writebacks)",
+  "comparison": "Scoped Figure 6-inspired analysis. CPU, workload, baselines, scale, and writeback-event coverage differ; not an exact reproduction."
+}

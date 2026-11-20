@@ -1,0 +1,7 @@
+repeat,mode,rng_seed,generated_sources,compiled_seeds,passed_seeds,generation_seconds,rtl_seconds,accepted,unique_opcodes,unique_writeback_pairs,writeback_events,repeated_writeback_events
+1,enabled,1001,5,5,5,115.5892,20.448900000000002,500,56,241,456,215
+1,disabled,1001,5,5,5,16.7375,20.008,500,56,149,345,196
+2,disabled,2001,5,5,5,15.3216,19.7182,500,54,161,374,213
+2,enabled,2001,5,5,5,112.3931,21.2761,500,57,246,462,216
+3,enabled,3001,5,5,5,118.6564,19.947,500,57,275,458,183
+3,disabled,3001,5,5,5,14.6272,19.8122,500,56,174,362,188

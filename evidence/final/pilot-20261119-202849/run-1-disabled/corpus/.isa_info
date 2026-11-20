@@ -1,0 +1,2 @@
+ISA=rv64imc_zicsr_zifencei
+ARCH_BITS=64

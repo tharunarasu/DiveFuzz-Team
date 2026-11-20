@@ -52,6 +52,26 @@ Across six runs, 120 of 120 generated seeds reached a good trap while checked ag
 
 The earlier run logged an average of 947.3 distinct observed write-back pairs with duplicate filtering enabled and 449.0 with it disabled, a ratio of 2.11 for the recorded subset. The addiw logging omission affects comparability, so this ratio must not be treated as a reliable estimate for all write-backs. All six runs reached the same line coverage, and the enabled condition took longer to generate the fixed-size corpus. These measurements cannot establish the paper’s reported coverage-speed advantages: our experiment uses one CPU, a restricted workload, an ablation baseline, and different metrics and budgets. Initialization activity, short runs, and different reference models may also affect coverage.
 
+### Paper Figure 6: scoped write-back repetition comparison
+
+The original paper reports approximately 55% weighted write-back repetition for DiveFuzz across its large-scale experiment. Figure 6 compares DiveFuzz with DifuzzRTL and Cascade at instruction counts up to two million [1, Section 5.2, p. 1971].
+
+| Setting | Mean repetition rate | Work per run |
+| --- | ---: | ---: |
+| Paper: DiveFuzz | Approximately 55% | Up to 2,000,000 instructions |
+| Our duplicate filter enabled | 44.62% | 500 accepted instructions |
+| Our duplicate filter disabled | 55.23% | 500 accepted instructions |
+
+Each local setting was repeated three times with five 100-instruction seeds per run. All 30 generated programs passed NutShell differential execution.
+
+Our rate is 100 × (1 − distinct opcode/value pairs ÷ logged nonzero integer-register write-back events). This is an operational approximation of the paper’s opcode-weighted repetition rate. We use Spike generator-validation logs, while the paper compares full fuzzers. Stores, floating-point and CSR write-backs, and writes to x0 are not counted in our rate. The filter-disabled setting is our local ablation, not DifuzzRTL or Cascade. The smaller sample, instruction mix, reference execution, and modified artifact prevent a direct numerical equivalence claim.
+
+The paper used an AMD EPYC 9684X machine with 1 TB of memory, Ubuntu 22.04, and Verilator 5.018; our host and tools are described above. The paper’s Figure 6 and Section 5.2 do not specify all details needed to establish identical write-back accounting. We therefore present this as a **scoped investigation of the trend**, with the observed outcome below, not a reproduction of the original two-million-instruction figure.
+
+![Figure 6-style repetition rates](evidence/final/paper-figure6/figure6-scoped-comparison.png)
+
+[Per-run data](evidence/final/paper-figure6/results.csv) · [Analysis details](evidence/final/paper-figure6/summary.json)
+
 ## Exception triage
 
 A separate ebreak test completed successfully under Spike and under NutShell without differential testing, while the bundled NEMU comparison reported a different exception cause. A read-only counter-write test passed all three checks. A directed odd pmpcfg CSR test passed on Spike and failed on NutShell alone and in the NEMU differential run. These are reproducible configuration-specific discrepancies requiring upstream and specification review before classifying any as new hardware defects.
@@ -62,7 +82,7 @@ Original paper: its reported evaluation covers four open-source RISC-V CPUs and 
 
 ## Conclusion
 
-We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. The original coverage runs reached the same measured line coverage and filtering incurred more generation time. Their write-back diversity counts have the logging limitation described above. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
+We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. The original coverage runs reached the same measured line coverage and filtering incurred more generation time. Their write-back diversity counts have the logging limitation described above. The corrected Figure 6-style follow-up observed lower logged write-back repetition with duplicate filtering enabled in this small workload. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
 
 ## References
 

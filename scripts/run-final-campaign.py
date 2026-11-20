@@ -170,7 +170,8 @@ def main():
             row.update(generation_seconds=run['generation']['seconds'])
             row.update({k: run['reference_metrics'][k] for k in columns if k in run['reference_metrics']})
             writer.writerow(row)
-    (ROOT / 'evidence/final/latest-campaign.txt').write_text(str(dest.relative_to(ROOT)))
+    if not args.pilot:
+        (ROOT / 'evidence/final/latest-campaign.txt').write_text(str(dest.relative_to(ROOT)))
     results['all_passed'] = all(s['passed'] for run in results['runs'] for s in run['seeds'])
     write_json(dest / 'results.json', results)
     print('RESULTS:', dest, flush=True)

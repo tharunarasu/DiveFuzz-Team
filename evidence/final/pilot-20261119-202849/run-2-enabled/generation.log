@@ -1,0 +1,15 @@
+# Debug mode enabled: mode=SUMMARY, filter=ACCEPTED only
+#   Output: /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_*.log
+---Start generate instrs---
+# Timeout per seed: 80.0s
+# Generating instructions:   0%|          | 0/5 [00:00<?, ?it/s]# Generating instructions:  20%|██        | 1/5 [00:24<01:39, 24.89s/it]# Generating instructions:  40%|████      | 2/5 [00:45<01:07, 22.40s/it]# Generating instructions:  60%|██████    | 3/5 [01:09<00:46, 23.30s/it]# Generating instructions:  80%|████████  | 4/5 [01:34<00:23, 23.75s/it]# Generating instructions: 100%|██████████| 5/5 [01:51<00:00, 21.33s/it]# Generating instructions: 100%|██████████| 5/5 [01:51<00:00, 22.28s/it]
+[Seed 0] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_0.log
+[Seed 1] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_1.log
+[Seed 2] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_2.log
+[Seed 3] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_3.log
+[Seed 4] Detailed debug enabled (mode=SUMMARY (ACCEPTED only)): /mnt/f/DiveFuzz/DiveFuzz/evidence/final/pilot-20261119-202849/run-2-enabled/corpus/spike_debug_seed_4.log
+# Successfully generated: 5/5 seeds
+# Total timeouts: 0
+# Total conflict avoidances: 500
+# Total failed conflict avoidances: 154
+# Execution time: 111.45 seconds

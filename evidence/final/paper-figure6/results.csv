@@ -1,0 +1,7 @@
+repeat,mode,rng_seed,generated,passed,accepted_instructions,logged_writebacks,unique_opcode_value_pairs,repetition_percent,addiw_events
+1,enabled,1001,5,5,500,456,241,47.14912280701754,8
+1,disabled,1001,5,5,500,345,149,56.811594202898554,6
+2,disabled,2001,5,5,500,374,161,56.95187165775402,6
+2,enabled,2001,5,5,500,462,246,46.753246753246756,6
+3,enabled,3001,5,5,500,458,275,39.956331877729255,18
+3,disabled,3001,5,5,500,362,174,51.93370165745856,13
