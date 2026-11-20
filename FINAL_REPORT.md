@@ -3,47 +3,77 @@
 **Team FuzzForge**  
 Tharun Arasu Sivakumar, Deepthi Tirumala, Felicia Jeyaseelan
 
-## Final phase results
+## Motivation and Background
 
-The NutShell in-order RTL design was built with Verilator line and toggle coverage. Across six runs, 120 of 120 generated seeds reached a good trap while checked against the bundled NEMU reference. Each seed requested 100 workload instructions. Each condition was repeated three times with 20 seeds and one worker.
-
-## Motivation and background
-
-DiveFuzz investigates repetitive write-back outcomes and uneven opcode selection in CPU fuzzing. It uses runtime instruction construction and reference execution to explore architectural states. RISC-V architectural state includes registers, program counter, memory, and control/status registers. Differential testing compares a processor implementation against a reference and requires investigation of mismatches.
+Processor verification must explore a vast space of instructions, operands, execution histories, and architectural states. The DiveFuzz paper identifies repeated write-back values and uneven opcode selection as limitations of existing CPU fuzzers [1]. It constructs instruction sequences using runtime state to increase behavioral diversity. RISC-V defines the architectural behavior expected from a CPU [2]. Differential testing compares the CPU implementation with a reference model, and a mismatch requires investigation before it can be classified as a defect.
 
 ## Methodology
 
 We used the pinned NutShell in-order implementation and its differential test harness. The adapted Spike engine validated generation. The generated binary images then executed in the Verilator RTL emulator with NEMU as the differential reference. Two conditions kept runtime validation and known-bug filtering enabled. The enabled condition rejected duplicate signatures. The disabled condition allowed duplicate signatures. Paired repetitions used RNG seeds 1001, 2001, and 3001, a fresh cache per run, one worker, and the same workload size.
 
-## Workload and metrics
+## Recommendation: Overall Architecture
 
-The comparison used the NutShell RV64IMC profile with CSR generation, ecall, ebreak, and generated jumps excluded. The initialization template still uses privileged setup instructions. Unique write-back pairs count distinct observed opcode and destination-value pairs from accepted Spike debug events. Coverage is the union of Verilator coverage points hit by the 20 seeds in a run within the NutCore hierarchy, excluding differential wrappers. Generation time is process wall time including startup and debug output. RTL execution time is recorded separately in the results file.
+The following architecture shows the implemented generation, compilation, and differential execution workflow. The duplicate filter setting is the independent variable. Both conditions use Spike validation and the same target configuration.
 
-## Measured comparison
+```mermaid
+flowchart LR
+  A[Seed and workload configuration] --> B[Generate candidate instruction]
+  B --> C[Adapted Spike runtime validation]
+  C --> D{Duplicate filter}
+  D -->|enabled or disabled| E[Assembly seeds]
+  E --> F[RISC-V assembler and linker]
+  F --> G[NutShell RTL emulator]
+  G <--> H[NEMU differential reference]
+  G --> I[Coverage, outcomes, and logs]
+```
 
-The average number of distinct observed write-back pairs was 947.3 with duplicate filtering enabled and 449.0 with it disabled. The ratio of those averages was 2.11 times. Mean generation time was 413.3 seconds enabled and 34.2 seconds disabled. Each run covered 606 of 702 line points. Mean toggle coverage was 71.34% enabled and 71.03% disabled, out of 213,316 toggle points. Each repetition uses 2,000 accepted workload instructions, so this comparison has a common requested instruction count. The three repetitions are a small local experiment and are not the paper’s coverage-speedup benchmark.
+## Implementation Details
 
-| Run | Filter | Pass | Unique pairs | Line | Toggle | Gen. sec |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | disabled | 20/20 | 443 | 86.32% | 71.10% | 34.1 |
-| 1 | enabled | 20/20 | 977 | 86.32% | 70.90% | 434.8 |
-| 2 | disabled | 20/20 | 486 | 86.32% | 70.94% | 27.5 |
-| 2 | enabled | 20/20 | 941 | 86.32% | 71.01% | 299.4 |
-| 3 | disabled | 20/20 | 418 | 86.32% | 71.05% | 41.1 |
-| 3 | enabled | 20/20 | 924 | 86.32% | 72.10% | 505.6 |
+Hardware: 12th Gen Intel Core i7-12700H, 14 physical cores and 20 logical processors, approximately 23.6 GiB installed RAM. Ubuntu WSL reported approximately 11 GiB available memory and 3 GiB swap. Software: Ubuntu 24.04.4 LTS under WSL2, Python 3.12.3, RISC-V GCC 13.2.0, GNU assembler 2.42, Java 17.0.21.1, Mill 0.11.2, Chisel 3.6.0, and Verilator 5.052. The primary implementation languages are Python, Scala/Chisel, C++, and generated Verilog. Sources, tools, caches, build outputs, and results were stored on F:. NutShell was pinned to commit 63a2687089ec374e6bd19d85ec040caab297dbff.
+
+## Workload and Metrics
+
+The comparison used the NutShell RV64IMC profile with CSR generation, ecall, ebreak, and generated jumps excluded. The initialization template still uses privileged setup instructions. Unique write-back pairs count distinct observed opcode and destination-value pairs from accepted Spike debug events. Coverage is the union of Verilator coverage points hit by the 20 seeds in a run within the NutCore hierarchy, excluding differential wrappers. Generation and RTL times are process wall times; generation includes startup and debug output.
+
+## Full Results
+
+Across six runs, 120 of 120 generated seeds reached a good trap while checked against NEMU. Each run generated and compiled 20 of 20 requested seeds, with 100 accepted workload instructions per seed and 2,000 per run. Mean generation time was 413.3 seconds with filtering enabled and 34.2 seconds disabled. Each run covered 606 of 702 line points. Mean toggle coverage was 71.34% enabled and 71.03% disabled, out of 213,316 toggle points.
+
+| Run | Filter | Pass | Unique pairs | Line | Toggle | Gen. sec | RTL sec |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | disabled | 20/20 | 443 | 86.32% | 71.10% | 34.1 | 70.0 |
+| 1 | enabled | 20/20 | 977 | 86.32% | 70.90% | 434.8 | 75.2 |
+| 2 | disabled | 20/20 | 486 | 86.32% | 70.94% | 27.5 | 66.8 |
+| 2 | enabled | 20/20 | 941 | 86.32% | 71.01% | 299.4 | 77.6 |
+| 3 | disabled | 20/20 | 418 | 86.32% | 71.05% | 41.1 | 80.4 |
+| 3 | enabled | 20/20 | 924 | 86.32% | 72.10% | 505.6 | 73.0 |
+
+## Insights
+
+The average number of distinct observed write-back pairs was 947.3 with duplicate filtering enabled and 449.0 with it disabled, a ratio of 2.11. This is directionally consistent with the paper’s claim of increased write-back diversity [1]. However, all six runs reached the same line coverage, and the enabled condition took longer to generate the fixed-size corpus. These measurements cannot establish the paper’s reported coverage-speed advantages: our experiment uses one CPU, a restricted workload, an ablation baseline, and different metrics and budgets. Initialization activity, short runs, and different reference models may also affect coverage.
 
 ## Exception triage
 
 A separate ebreak test completed successfully under Spike and under NutShell without differential testing, while the bundled NEMU comparison reported a different exception cause. A read-only counter-write test passed all three checks. A directed odd pmpcfg CSR test passed on Spike and failed on NutShell alone and in the NEMU differential run. These are reproducible configuration-specific discrepancies requiring upstream and specification review before classifying any as new hardware defects.
 
-## Limitations
+## Discussion
 
-The comparison covers one CPU revision, one host, a short fixed-size corpus, and a restricted integer/memory workload. Compressed control-flow generation, CSR fuzzing, and full paper baselines were excluded from the main comparison. Matching RNG seeds do not produce identical instruction streams across conditions once filtering causes different retries. Coverage includes reset and initialization activity. There is no measured time-to-coverage comparison, baseline-fuzzer reproduction, or confirmed new bug. The original paper reports its own multi-CPU results and speedups under its experimental conditions.
+Original paper: its reported evaluation covers four open-source RISC-V CPUs and the authors’ selected baselines, coverage metrics, and experimental conditions. Generalization to other architectures and post-silicon behavior requires additional study. The full paper was not accessible during this reproduction, so its exact metric definitions and experimental conditions could not be independently checked beyond the abstract [1]. Student implementation: the comparison covers one CPU revision, one host, and a small restricted workload. Compressed control-flow generation, CSR fuzzing, and full paper baselines were excluded from the main comparison. Matching RNG seeds do not produce identical instruction streams once filtering causes different retries. Coverage includes reset and initialization activity. We did not measure time to a common coverage threshold or confirm any new bug.
 
-## Reproduction and evidence
+## Conclusion
 
-The full command lines, per-seed logs, coverage files, and machine-readable results are stored under evidence/final/campaign-20261119-184525. Run scripts/run-final-campaign-f.sh from WSL to repeat the experiment. Raw coverage files are retained locally and omitted from Git. The previous PDF is the phase-one report. The phase-two findings are based on the local run and the directed triage logs under evidence/final/triage.
+We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. Duplicate filtering increased observed opcode/write-back diversity in this sample but did not increase measured line coverage and incurred more generation time. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
 
 ## References
 
-[Guo et al., DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction, ACM CCS 2025](https://doi.org/10.1145/3719027.3765167). [RISC-V ISA Manual](https://github.com/riscv/riscv-isa-manual). [Spike simulator](https://github.com/riscv-software-src/riscv-isa-sim). [Team artifact](https://github.com/tharunarasu/DiveFuzz-Team).
+[1] Guo et al., [DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction](https://doi.org/10.1145/3719027.3765167), ACM CCS 2025, pp. 1964–1978.
+
+[2] [RISC-V ISA Manual](https://github.com/riscv/riscv-isa-manual).
+
+[3] [Spike RISC-V ISA simulator](https://github.com/riscv-software-src/riscv-isa-sim).
+
+[4] [DiveFuzz team reproduction repository](https://github.com/tharunarasu/DiveFuzz-Team).
+
+## Appendix: Code, Data, and Reproduction
+
+Full command lines, per-seed logs, and machine-readable results are in [evidence/final/campaign-20261119-184525](evidence/final/campaign-20261119-184525/results.json). The [per-run CSV](evidence/final/campaign-20261119-184525/runs.csv) includes generation and RTL execution times, accepted instructions, opcode counts, write-back events, and repeated values. [Directed exception tests](evidence/final/triage/20261119-190729/results.json) contain the Spike, standalone RTL, and NEMU differential results. Run `scripts/run-final-campaign-f.sh` from WSL as described in [SETUP.md](SETUP.md). Raw coverage files remain on F: and are omitted from Git.
