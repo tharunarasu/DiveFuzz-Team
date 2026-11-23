@@ -1,0 +1,7 @@
+repeat,mode,rng_seed,common_final_coverage_points,target_coverage_points,run_final_coverage_points,time_to_target_rtl_seconds,time_to_target_end_to_end_seconds,seeds_to_target,instructions_to_target
+1,enabled,1001,6126,6065,6132,34.2373,470.5813,8,800
+1,disabled,1001,6126,6065,6137,27.8775,63.1717,8,800
+2,disabled,2001,6126,6065,6126,19.866,48.224,6,600
+2,enabled,2001,6126,6065,6134,25.8618,326.658,8,800
+3,enabled,3001,6126,6065,6171,21.6682,528.1191,6,600
+3,disabled,3001,6126,6065,6160,28.6708,71.1544,7,700

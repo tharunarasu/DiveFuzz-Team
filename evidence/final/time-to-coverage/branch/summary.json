@@ -1,0 +1,1300 @@
+{
+  "campaign": "evidence\\final\\campaign-20261119-184525",
+  "metric": "NutCore Verilator branch coverage",
+  "seed_order": "campaign execution order (lexicographic source order)",
+  "fraction_of_common_final": 0.99,
+  "common_final_coverage_points": 6126,
+  "target_coverage_points": 6065,
+  "runs": [
+    {
+      "repeat": 1,
+      "mode": "enabled",
+      "rng_seed": 1001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6132,
+      "time_to_target_rtl_seconds": 34.2373,
+      "time_to_target_end_to_end_seconds": 470.5813,
+      "seeds_to_target": 8,
+      "instructions_to_target": 800,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5955,
+          "final_points": 6132,
+          "percent_of_run_final": 97.1135,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 7.1475,
+          "end_to_end_seconds": 442.1462
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 6011,
+          "final_points": 6132,
+          "percent_of_run_final": 98.0267,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 10.1304,
+          "end_to_end_seconds": 445.2982
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6028,
+          "final_points": 6132,
+          "percent_of_run_final": 98.304,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 14.0944,
+          "end_to_end_seconds": 449.5913
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6036,
+          "final_points": 6132,
+          "percent_of_run_final": 98.4344,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 17.372,
+          "end_to_end_seconds": 453.0334
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6045,
+          "final_points": 6132,
+          "percent_of_run_final": 98.5812,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 21.2593,
+          "end_to_end_seconds": 457.2172
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6051,
+          "final_points": 6132,
+          "percent_of_run_final": 98.6791,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 27.2995,
+          "end_to_end_seconds": 463.3793
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6061,
+          "final_points": 6132,
+          "percent_of_run_final": 98.8421,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 30.6435,
+          "end_to_end_seconds": 466.8768
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6069,
+          "final_points": 6132,
+          "percent_of_run_final": 98.9726,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 34.2373,
+          "end_to_end_seconds": 470.5813
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6073,
+          "final_points": 6132,
+          "percent_of_run_final": 99.0378,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 37.7711,
+          "end_to_end_seconds": 474.8979
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6073,
+          "final_points": 6132,
+          "percent_of_run_final": 99.0378,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 40.7545,
+          "end_to_end_seconds": 477.9966
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6078,
+          "final_points": 6132,
+          "percent_of_run_final": 99.1194,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 44.3085,
+          "end_to_end_seconds": 481.7756
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6082,
+          "final_points": 6132,
+          "percent_of_run_final": 99.1846,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 47.4452,
+          "end_to_end_seconds": 485.0703
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6088,
+          "final_points": 6132,
+          "percent_of_run_final": 99.2825,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 50.9306,
+          "end_to_end_seconds": 488.6949
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6102,
+          "final_points": 6132,
+          "percent_of_run_final": 99.5108,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 54.2207,
+          "end_to_end_seconds": 492.1668
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6110,
+          "final_points": 6132,
+          "percent_of_run_final": 99.6412,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 57.9927,
+          "end_to_end_seconds": 496.1373
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6116,
+          "final_points": 6132,
+          "percent_of_run_final": 99.7391,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 61.3743,
+          "end_to_end_seconds": 499.6757
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6122,
+          "final_points": 6132,
+          "percent_of_run_final": 99.8369,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 65.4192,
+          "end_to_end_seconds": 503.8746
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6122,
+          "final_points": 6132,
+          "percent_of_run_final": 99.8369,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 68.4505,
+          "end_to_end_seconds": 507.0322
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6124,
+          "final_points": 6132,
+          "percent_of_run_final": 99.8695,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 71.6793,
+          "end_to_end_seconds": 510.3622
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6132,
+          "final_points": 6132,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 75.1627,
+          "end_to_end_seconds": 514.1117
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "mode": "disabled",
+      "rng_seed": 1001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6137,
+      "time_to_target_rtl_seconds": 27.8775,
+      "time_to_target_end_to_end_seconds": 63.1717,
+      "seeds_to_target": 8,
+      "instructions_to_target": 800,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5959,
+          "final_points": 6137,
+          "percent_of_run_final": 97.0996,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 3.6934,
+          "end_to_end_seconds": 37.9799
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 5999,
+          "final_points": 6137,
+          "percent_of_run_final": 97.7513,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 7.2267,
+          "end_to_end_seconds": 41.7473
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6018,
+          "final_points": 6137,
+          "percent_of_run_final": 98.0609,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 10.7417,
+          "end_to_end_seconds": 45.3965
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6037,
+          "final_points": 6137,
+          "percent_of_run_final": 98.3705,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 14.3998,
+          "end_to_end_seconds": 49.2287
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6048,
+          "final_points": 6137,
+          "percent_of_run_final": 98.5498,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 17.9336,
+          "end_to_end_seconds": 52.9307
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6057,
+          "final_points": 6137,
+          "percent_of_run_final": 98.6964,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 21.3125,
+          "end_to_end_seconds": 56.415
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6059,
+          "final_points": 6137,
+          "percent_of_run_final": 98.729,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 24.5457,
+          "end_to_end_seconds": 59.7281
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6068,
+          "final_points": 6137,
+          "percent_of_run_final": 98.8757,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 27.8775,
+          "end_to_end_seconds": 63.1717
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6072,
+          "final_points": 6137,
+          "percent_of_run_final": 98.9409,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 31.1164,
+          "end_to_end_seconds": 66.5007
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6074,
+          "final_points": 6137,
+          "percent_of_run_final": 98.9734,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 34.6124,
+          "end_to_end_seconds": 70.2778
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6074,
+          "final_points": 6137,
+          "percent_of_run_final": 98.9734,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 37.8972,
+          "end_to_end_seconds": 73.7426
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6077,
+          "final_points": 6137,
+          "percent_of_run_final": 99.0223,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 41.33,
+          "end_to_end_seconds": 77.3265
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6086,
+          "final_points": 6137,
+          "percent_of_run_final": 99.169,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 44.9127,
+          "end_to_end_seconds": 81.0012
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6105,
+          "final_points": 6137,
+          "percent_of_run_final": 99.4786,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 48.2446,
+          "end_to_end_seconds": 84.4296
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6113,
+          "final_points": 6137,
+          "percent_of_run_final": 99.6089,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 51.585,
+          "end_to_end_seconds": 87.8438
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6119,
+          "final_points": 6137,
+          "percent_of_run_final": 99.7067,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 55.2763,
+          "end_to_end_seconds": 91.6336
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6123,
+          "final_points": 6137,
+          "percent_of_run_final": 99.7719,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 58.4045,
+          "end_to_end_seconds": 94.8972
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6123,
+          "final_points": 6137,
+          "percent_of_run_final": 99.7719,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 63.0866,
+          "end_to_end_seconds": 100.0197
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6127,
+          "final_points": 6137,
+          "percent_of_run_final": 99.8371,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 66.593,
+          "end_to_end_seconds": 103.8938
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6137,
+          "final_points": 6137,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 69.9844,
+          "end_to_end_seconds": 107.4537
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "disabled",
+      "rng_seed": 2001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6126,
+      "time_to_target_rtl_seconds": 19.866,
+      "time_to_target_end_to_end_seconds": 48.224,
+      "seeds_to_target": 6,
+      "instructions_to_target": 600,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5931,
+          "final_points": 6126,
+          "percent_of_run_final": 96.8168,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 3.5349,
+          "end_to_end_seconds": 31.2138
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 6000,
+          "final_points": 6126,
+          "percent_of_run_final": 97.9432,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 6.7707,
+          "end_to_end_seconds": 34.5656
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6027,
+          "final_points": 6126,
+          "percent_of_run_final": 98.3839,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 10.2059,
+          "end_to_end_seconds": 38.1443
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6047,
+          "final_points": 6126,
+          "percent_of_run_final": 98.7104,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 13.3081,
+          "end_to_end_seconds": 41.3557
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6055,
+          "final_points": 6126,
+          "percent_of_run_final": 98.841,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 16.4951,
+          "end_to_end_seconds": 44.6635
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6069,
+          "final_points": 6126,
+          "percent_of_run_final": 99.0695,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 19.866,
+          "end_to_end_seconds": 48.224
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6069,
+          "final_points": 6126,
+          "percent_of_run_final": 99.0695,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 23.2485,
+          "end_to_end_seconds": 51.7188
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6078,
+          "final_points": 6126,
+          "percent_of_run_final": 99.2165,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 26.63,
+          "end_to_end_seconds": 55.2254
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6080,
+          "final_points": 6126,
+          "percent_of_run_final": 99.2491,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 30.0693,
+          "end_to_end_seconds": 58.756
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6084,
+          "final_points": 6126,
+          "percent_of_run_final": 99.3144,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 33.3031,
+          "end_to_end_seconds": 62.1641
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6088,
+          "final_points": 6126,
+          "percent_of_run_final": 99.3797,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 36.8994,
+          "end_to_end_seconds": 65.864
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6094,
+          "final_points": 6126,
+          "percent_of_run_final": 99.4776,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 40.0949,
+          "end_to_end_seconds": 69.1845
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6098,
+          "final_points": 6126,
+          "percent_of_run_final": 99.5429,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 43.2319,
+          "end_to_end_seconds": 72.417
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6102,
+          "final_points": 6126,
+          "percent_of_run_final": 99.6082,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 46.3126,
+          "end_to_end_seconds": 75.5907
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6108,
+          "final_points": 6126,
+          "percent_of_run_final": 99.7062,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 49.5942,
+          "end_to_end_seconds": 79.1152
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6114,
+          "final_points": 6126,
+          "percent_of_run_final": 99.8041,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 52.8245,
+          "end_to_end_seconds": 82.4995
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6116,
+          "final_points": 6126,
+          "percent_of_run_final": 99.8368,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 56.3151,
+          "end_to_end_seconds": 86.2107
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6120,
+          "final_points": 6126,
+          "percent_of_run_final": 99.9021,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 59.7087,
+          "end_to_end_seconds": 89.8195
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6120,
+          "final_points": 6126,
+          "percent_of_run_final": 99.9021,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 63.2911,
+          "end_to_end_seconds": 93.5599
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6126,
+          "final_points": 6126,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 66.832,
+          "end_to_end_seconds": 97.2422
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "enabled",
+      "rng_seed": 2001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6134,
+      "time_to_target_rtl_seconds": 25.8618,
+      "time_to_target_end_to_end_seconds": 326.658,
+      "seeds_to_target": 8,
+      "instructions_to_target": 800,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5951,
+          "final_points": 6134,
+          "percent_of_run_final": 97.0166,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 3.1302,
+          "end_to_end_seconds": 302.6538
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 6005,
+          "final_points": 6134,
+          "percent_of_run_final": 97.897,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 6.3134,
+          "end_to_end_seconds": 305.9846
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6030,
+          "final_points": 6134,
+          "percent_of_run_final": 98.3045,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 9.342,
+          "end_to_end_seconds": 309.1486
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6043,
+          "final_points": 6134,
+          "percent_of_run_final": 98.5165,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 12.5266,
+          "end_to_end_seconds": 312.47
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6048,
+          "final_points": 6134,
+          "percent_of_run_final": 98.598,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 15.5585,
+          "end_to_end_seconds": 315.6604
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6058,
+          "final_points": 6134,
+          "percent_of_run_final": 98.761,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 18.7883,
+          "end_to_end_seconds": 319.0217
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6060,
+          "final_points": 6134,
+          "percent_of_run_final": 98.7936,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 22.2749,
+          "end_to_end_seconds": 322.9149
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6068,
+          "final_points": 6134,
+          "percent_of_run_final": 98.924,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 25.8618,
+          "end_to_end_seconds": 326.658
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6070,
+          "final_points": 6134,
+          "percent_of_run_final": 98.9566,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 29.1445,
+          "end_to_end_seconds": 330.0607
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6074,
+          "final_points": 6134,
+          "percent_of_run_final": 99.0218,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 34.6308,
+          "end_to_end_seconds": 335.6572
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6076,
+          "final_points": 6134,
+          "percent_of_run_final": 99.0545,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 39.2728,
+          "end_to_end_seconds": 340.4897
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6088,
+          "final_points": 6134,
+          "percent_of_run_final": 99.2501,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 44.1632,
+          "end_to_end_seconds": 345.5569
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6094,
+          "final_points": 6134,
+          "percent_of_run_final": 99.3479,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 48.3661,
+          "end_to_end_seconds": 350.006
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6096,
+          "final_points": 6134,
+          "percent_of_run_final": 99.3805,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 52.6683,
+          "end_to_end_seconds": 354.4093
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6104,
+          "final_points": 6134,
+          "percent_of_run_final": 99.5109,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 56.6906,
+          "end_to_end_seconds": 358.6282
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6110,
+          "final_points": 6134,
+          "percent_of_run_final": 99.6087,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 61.3946,
+          "end_to_end_seconds": 363.5427
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6112,
+          "final_points": 6134,
+          "percent_of_run_final": 99.6413,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 66.0963,
+          "end_to_end_seconds": 368.4289
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6126,
+          "final_points": 6134,
+          "percent_of_run_final": 99.8696,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 69.4282,
+          "end_to_end_seconds": 371.8787
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6126,
+          "final_points": 6134,
+          "percent_of_run_final": 99.8696,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 73.0104,
+          "end_to_end_seconds": 375.5711
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6134,
+          "final_points": 6134,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 77.5558,
+          "end_to_end_seconds": 380.2312
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "mode": "enabled",
+      "rng_seed": 3001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6171,
+      "time_to_target_rtl_seconds": 21.6682,
+      "time_to_target_end_to_end_seconds": 528.1191,
+      "seeds_to_target": 6,
+      "instructions_to_target": 600,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5957,
+          "final_points": 6171,
+          "percent_of_run_final": 96.5322,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 3.7421,
+          "end_to_end_seconds": 509.4785
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 5999,
+          "final_points": 6171,
+          "percent_of_run_final": 97.2128,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 7.174,
+          "end_to_end_seconds": 513.0093
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6018,
+          "final_points": 6171,
+          "percent_of_run_final": 97.5207,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 10.6546,
+          "end_to_end_seconds": 516.6501
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6035,
+          "final_points": 6171,
+          "percent_of_run_final": 97.7961,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 14.0888,
+          "end_to_end_seconds": 520.2391
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6047,
+          "final_points": 6171,
+          "percent_of_run_final": 97.9906,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 17.7332,
+          "end_to_end_seconds": 524.069
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6065,
+          "final_points": 6171,
+          "percent_of_run_final": 98.2823,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 21.6682,
+          "end_to_end_seconds": 528.1191
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6074,
+          "final_points": 6171,
+          "percent_of_run_final": 98.4281,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 25.649,
+          "end_to_end_seconds": 532.2447
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6086,
+          "final_points": 6171,
+          "percent_of_run_final": 98.6226,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 29.0811,
+          "end_to_end_seconds": 535.7958
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6101,
+          "final_points": 6171,
+          "percent_of_run_final": 98.8657,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 32.7172,
+          "end_to_end_seconds": 539.5821
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6109,
+          "final_points": 6171,
+          "percent_of_run_final": 98.9953,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 36.3527,
+          "end_to_end_seconds": 543.5515
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6113,
+          "final_points": 6171,
+          "percent_of_run_final": 99.0601,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 40.1427,
+          "end_to_end_seconds": 547.4583
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6124,
+          "final_points": 6171,
+          "percent_of_run_final": 99.2384,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 43.5725,
+          "end_to_end_seconds": 551.0031
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6124,
+          "final_points": 6171,
+          "percent_of_run_final": 99.2384,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 47.52,
+          "end_to_end_seconds": 555.1038
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6134,
+          "final_points": 6171,
+          "percent_of_run_final": 99.4004,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 51.2228,
+          "end_to_end_seconds": 559.1044
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6151,
+          "final_points": 6171,
+          "percent_of_run_final": 99.6759,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 54.8119,
+          "end_to_end_seconds": 562.798
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6153,
+          "final_points": 6171,
+          "percent_of_run_final": 99.7083,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 58.824,
+          "end_to_end_seconds": 567.0525
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6159,
+          "final_points": 6171,
+          "percent_of_run_final": 99.8055,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 62.3094,
+          "end_to_end_seconds": 570.677
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6165,
+          "final_points": 6171,
+          "percent_of_run_final": 99.9028,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 66.2479,
+          "end_to_end_seconds": 574.7508
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6167,
+          "final_points": 6171,
+          "percent_of_run_final": 99.9352,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 69.6817,
+          "end_to_end_seconds": 578.2945
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6171,
+          "final_points": 6171,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 73.0225,
+          "end_to_end_seconds": 581.7267
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "mode": "disabled",
+      "rng_seed": 3001,
+      "target_fraction": 0.99,
+      "common_final_coverage_points": 6126,
+      "target_coverage_points": 6065,
+      "run_final_coverage_points": 6160,
+      "time_to_target_rtl_seconds": 28.6708,
+      "time_to_target_end_to_end_seconds": 71.1544,
+      "seeds_to_target": 7,
+      "instructions_to_target": 700,
+      "curve": [
+        {
+          "seed_index": 1,
+          "seed_name": "seeds_0_.S",
+          "covered_points": 5939,
+          "final_points": 6160,
+          "percent_of_run_final": 96.4123,
+          "accepted_instructions": 100,
+          "rtl_seconds_since_first_seed": 3.7302,
+          "end_to_end_seconds": 45.1232
+        },
+        {
+          "seed_index": 2,
+          "seed_name": "seeds_10_.S",
+          "covered_points": 5998,
+          "final_points": 6160,
+          "percent_of_run_final": 97.3701,
+          "accepted_instructions": 200,
+          "rtl_seconds_since_first_seed": 10.4333,
+          "end_to_end_seconds": 52.0379
+        },
+        {
+          "seed_index": 3,
+          "seed_name": "seeds_11_.S",
+          "covered_points": 6016,
+          "final_points": 6160,
+          "percent_of_run_final": 97.6623,
+          "accepted_instructions": 300,
+          "rtl_seconds_since_first_seed": 14.0677,
+          "end_to_end_seconds": 55.8187
+        },
+        {
+          "seed_index": 4,
+          "seed_name": "seeds_12_.S",
+          "covered_points": 6030,
+          "final_points": 6160,
+          "percent_of_run_final": 97.8896,
+          "accepted_instructions": 400,
+          "rtl_seconds_since_first_seed": 18.0046,
+          "end_to_end_seconds": 59.8813
+        },
+        {
+          "seed_index": 5,
+          "seed_name": "seeds_13_.S",
+          "covered_points": 6050,
+          "final_points": 6160,
+          "percent_of_run_final": 98.2143,
+          "accepted_instructions": 500,
+          "rtl_seconds_since_first_seed": 21.5978,
+          "end_to_end_seconds": 63.8263
+        },
+        {
+          "seed_index": 6,
+          "seed_name": "seeds_14_.S",
+          "covered_points": 6064,
+          "final_points": 6160,
+          "percent_of_run_final": 98.4416,
+          "accepted_instructions": 600,
+          "rtl_seconds_since_first_seed": 25.2841,
+          "end_to_end_seconds": 67.6126
+        },
+        {
+          "seed_index": 7,
+          "seed_name": "seeds_15_.S",
+          "covered_points": 6073,
+          "final_points": 6160,
+          "percent_of_run_final": 98.5877,
+          "accepted_instructions": 700,
+          "rtl_seconds_since_first_seed": 28.6708,
+          "end_to_end_seconds": 71.1544
+        },
+        {
+          "seed_index": 8,
+          "seed_name": "seeds_16_.S",
+          "covered_points": 6083,
+          "final_points": 6160,
+          "percent_of_run_final": 98.75,
+          "accepted_instructions": 800,
+          "rtl_seconds_since_first_seed": 32.1542,
+          "end_to_end_seconds": 74.7648
+        },
+        {
+          "seed_index": 9,
+          "seed_name": "seeds_17_.S",
+          "covered_points": 6099,
+          "final_points": 6160,
+          "percent_of_run_final": 99.0097,
+          "accepted_instructions": 900,
+          "rtl_seconds_since_first_seed": 35.7931,
+          "end_to_end_seconds": 78.542
+        },
+        {
+          "seed_index": 10,
+          "seed_name": "seeds_18_.S",
+          "covered_points": 6103,
+          "final_points": 6160,
+          "percent_of_run_final": 99.0747,
+          "accepted_instructions": 1000,
+          "rtl_seconds_since_first_seed": 39.5318,
+          "end_to_end_seconds": 82.4114
+        },
+        {
+          "seed_index": 11,
+          "seed_name": "seeds_19_.S",
+          "covered_points": 6105,
+          "final_points": 6160,
+          "percent_of_run_final": 99.1071,
+          "accepted_instructions": 1100,
+          "rtl_seconds_since_first_seed": 43.4529,
+          "end_to_end_seconds": 86.7188
+        },
+        {
+          "seed_index": 12,
+          "seed_name": "seeds_1_.S",
+          "covered_points": 6113,
+          "final_points": 6160,
+          "percent_of_run_final": 99.237,
+          "accepted_instructions": 1200,
+          "rtl_seconds_since_first_seed": 47.2346,
+          "end_to_end_seconds": 90.7051
+        },
+        {
+          "seed_index": 13,
+          "seed_name": "seeds_2_.S",
+          "covered_points": 6117,
+          "final_points": 6160,
+          "percent_of_run_final": 99.3019,
+          "accepted_instructions": 1300,
+          "rtl_seconds_since_first_seed": 50.7732,
+          "end_to_end_seconds": 94.6171
+        },
+        {
+          "seed_index": 14,
+          "seed_name": "seeds_3_.S",
+          "covered_points": 6123,
+          "final_points": 6160,
+          "percent_of_run_final": 99.3994,
+          "accepted_instructions": 1400,
+          "rtl_seconds_since_first_seed": 54.7557,
+          "end_to_end_seconds": 98.717
+        },
+        {
+          "seed_index": 15,
+          "seed_name": "seeds_4_.S",
+          "covered_points": 6140,
+          "final_points": 6160,
+          "percent_of_run_final": 99.6753,
+          "accepted_instructions": 1500,
+          "rtl_seconds_since_first_seed": 61.1133,
+          "end_to_end_seconds": 105.2413
+        },
+        {
+          "seed_index": 16,
+          "seed_name": "seeds_5_.S",
+          "covered_points": 6142,
+          "final_points": 6160,
+          "percent_of_run_final": 99.7078,
+          "accepted_instructions": 1600,
+          "rtl_seconds_since_first_seed": 65.169,
+          "end_to_end_seconds": 109.5584
+        },
+        {
+          "seed_index": 17,
+          "seed_name": "seeds_6_.S",
+          "covered_points": 6148,
+          "final_points": 6160,
+          "percent_of_run_final": 99.8052,
+          "accepted_instructions": 1700,
+          "rtl_seconds_since_first_seed": 68.9043,
+          "end_to_end_seconds": 113.4572
+        },
+        {
+          "seed_index": 18,
+          "seed_name": "seeds_7_.S",
+          "covered_points": 6150,
+          "final_points": 6160,
+          "percent_of_run_final": 99.8377,
+          "accepted_instructions": 1800,
+          "rtl_seconds_since_first_seed": 73.0384,
+          "end_to_end_seconds": 117.6987
+        },
+        {
+          "seed_index": 19,
+          "seed_name": "seeds_8_.S",
+          "covered_points": 6154,
+          "final_points": 6160,
+          "percent_of_run_final": 99.9026,
+          "accepted_instructions": 1900,
+          "rtl_seconds_since_first_seed": 76.9675,
+          "end_to_end_seconds": 121.7208
+        },
+        {
+          "seed_index": 20,
+          "seed_name": "seeds_9_.S",
+          "covered_points": 6160,
+          "final_points": 6160,
+          "percent_of_run_final": 100.0,
+          "accepted_instructions": 2000,
+          "rtl_seconds_since_first_seed": 80.4142,
+          "end_to_end_seconds": 125.2855
+        }
+      ]
+    }
+  ]
+}

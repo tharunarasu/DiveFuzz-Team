@@ -35,6 +35,17 @@ Hardware: 12th Gen Intel Core i7-12700H, 14 physical cores and 20 logical proces
 
 The comparison used the NutShell RV64IMC profile with CSR generation, ecall, ebreak, and generated jumps excluded. The initialization template still uses privileged setup instructions. Unique write-back pairs count distinct observed opcode and destination-value pairs from accepted Spike debug events. Coverage is the union of Verilator coverage points hit by the 20 seeds in a run within the NutCore hierarchy, excluding differential wrappers. Generation and RTL times are process wall times; generation includes startup and debug output.
 
+## Time-to-Coverage
+
+To add a common coverage-speed measurement, we replayed the recorded per-seed coverage dumps in campaign execution order. The metric was NutCore Verilator branch coverage, using a common threshold of 6065 covered points, which is 99% of the 6126-point minimum final union across runs. The first seed covers most boot and initialization logic, so an 80% threshold would be reached immediately and would not distinguish the methods; the 99% threshold measures the incremental tail. End-to-end time includes generation, compilation, and RTL execution; RTL-only time starts after generation.
+
+| Filter | Mean seeds to 99% branch target | Mean RTL seconds | Mean end-to-end seconds |
+| --- | ---: | ---: | ---: |
+| Enabled | 7.3 | 27.26 | 441.79 |
+| Disabled | 7.0 | 25.47 | 60.85 |
+
+[Per-run time-to-coverage data](evidence/final/time-to-coverage/branch/summary.csv) · [Seed-by-seed curve](evidence/final/time-to-coverage/branch/curve.csv)
+
 ## Full Results
 
 Across six runs, 120 of 120 generated seeds reached a good trap while checked against NEMU. Each run generated and compiled 20 of 20 requested seeds, with 100 accepted workload instructions per seed and 2,000 per run. Mean generation time was 413.3 seconds with filtering enabled and 34.2 seconds disabled. Each run covered 606 of 702 line points. Mean toggle coverage was 71.34% enabled and 71.03% disabled, out of 213,316 toggle points. A later audit found that the parser omitted addiw destination values in these original logs. The unique-pair counts below are therefore counts from an incomplete logged subset and may be biased. The Figure 6 experiment below uses the corrected parser.
@@ -76,13 +87,24 @@ The paper used an AMD EPYC 9684X machine with 1 TB of memory, Ubuntu 22.04, and 
 
 A separate ebreak test completed successfully under Spike and under NutShell without differential testing, while the bundled NEMU comparison reported a different exception cause. A read-only counter-write test passed all three checks. A directed odd pmpcfg CSR test passed on Spike and failed on NutShell alone and in the NEMU differential run. These are reproducible configuration-specific discrepancies requiring upstream and specification review before classifying any as new hardware defects.
 
+## Bug-detection comparison
+
+The generated campaign found 0 confirmed new CPU bugs: all 120 generated seeds passed the selected NutShell/NEMU check. The directed suite had 4 cases: 2 passed, one was a reference-only disagreement (ebreak: NEMU reported cause 2 while Spike and standalone NutShell completed with cause 3), and one was a NutShell discrepancy candidate (odd pmpcfg). The paper reports 26 new bugs and 15 CVE assignments, but those results used historical CPU revisions and a bug corpus that are not present in this checkout. Therefore our result is a completed local detection/triage comparison, not a full re-detection of the paper's 26 bugs.
+
+| Scope | Cases | Passed | Reference-only disagreements | DUT discrepancy candidates | Confirmed new bugs |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Generated campaign | 120 | 120 | 0 | 0 | 0 |
+| Directed triage | 4 | 2 | 1 | 1 | 0 |
+
+[Machine-readable bug-detection evidence](evidence/final/bug-detection/summary.json) · [Comparison CSV](evidence/final/bug-detection/comparison.csv)
+
 ## Discussion
 
-Original paper: its reported evaluation covers four open-source RISC-V CPUs and the authors’ selected baselines, coverage metrics, and experimental conditions. Generalization to other architectures and post-silicon behavior requires additional study. The authors measured control-register, mux, line, ready/valid and toggle coverage on Rocket, whereas our coverage results use NutShell. Student implementation: the comparison covers one CPU revision, one host, and a small restricted workload. Compressed control-flow generation, CSR fuzzing, and full paper baselines were excluded from the main comparison. Matching RNG seeds do not produce identical instruction streams once filtering causes different retries. Coverage includes reset and initialization activity. We did not measure time to a common coverage threshold or confirm any new bug.
+Original paper: its reported evaluation covers four open-source RISC-V CPUs and the authors' selected baselines, coverage metrics, and experimental conditions. Generalization to other architectures and post-silicon behavior requires additional study. Student implementation: the comparison covers one CPU revision, one host, and a restricted workload. The 99% branch time-to-coverage result is measured but dominated by the incremental tail after boot. We did not reproduce the paper's historical bug corpus or confirm any new bug.
 
 ## Conclusion
 
-We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. The original coverage runs reached the same measured line coverage and filtering incurred more generation time. Their write-back diversity counts have the logging limitation described above. The corrected Figure 6-style follow-up observed lower logged write-back repetition with duplicate filtering enabled in this small workload. Two directed discrepancies remain candidates for investigation rather than confirmed new CPU bugs.
+We reproduced and extended a scoped part of DiveFuzz on the NutShell RTL model. All 120 generated test programs passed differential execution under the selected workload. At the 99% common branch-coverage threshold, filtering enabled reached the target in an average of 7.3 seeds and 27.26 RTL seconds (441.79 seconds end-to-end), while filtering disabled reached it in 7.0 seeds and 25.47 RTL seconds (60.85 seconds end-to-end). No new bug is confirmed: one directed case is a reference disagreement and one is a DUT discrepancy candidate. The paper's 26-bug result is not reproduced because its historical buggy revisions and baseline tools are outside this checkout.
 
 ## References
 
@@ -96,4 +118,4 @@ We reproduced a scoped part of DiveFuzz on the NutShell RTL model. All 120 gener
 
 ## Appendix: Code, Data, and Reproduction
 
-Full command lines, per-seed logs, and machine-readable results are in [evidence/final/campaign-20261119-184525](evidence/final/campaign-20261119-184525/results.json). The [per-run CSV](evidence/final/campaign-20261119-184525/runs.csv) includes generation and RTL execution times, accepted instructions, opcode counts, write-back events, and repeated values. [Directed exception tests](evidence/final/triage/20261119-190729/results.json) contain the Spike, standalone RTL, and NEMU differential results. Run `scripts/run-final-campaign-f.sh` from WSL as described in [SETUP.md](SETUP.md). Raw coverage files remain on F: and are omitted from Git.
+Full command lines, per-seed logs, and machine-readable results are in [evidence/final/campaign-20261119-184525](evidence/final/campaign-20261119-184525/results.json). The [per-run CSV](evidence/final/campaign-20261119-184525/runs.csv) includes generation and RTL execution times, accepted instructions, opcode counts, write-back events, and repeated values. The [time-to-coverage summary](evidence/final/time-to-coverage/branch/summary.json) and [coverage curve](evidence/final/time-to-coverage/branch/curve.csv) record the common 99% branch threshold. The [bug-detection summary](evidence/final/bug-detection/summary.json) and [comparison CSV](evidence/final/bug-detection/comparison.csv) record generated-seed outcomes and directed triage. Run `scripts/run-final-campaign-f.sh` from WSL as described in [SETUP.md](SETUP.md). Raw coverage files remain on F: and are omitted from Git.

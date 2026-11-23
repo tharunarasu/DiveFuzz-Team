@@ -9,6 +9,7 @@ This repository shares our DiveFuzz environment setup, paper report, and prelimi
 - [Verified environment setup and rerun commands](SETUP.md)
 - [Recorded command results and artifact hashes](evidence/verification.json)
 - [Setup and verification scripts](scripts/)
+- [Time-to-coverage and bug-detection evidence](evidence/final/time-to-coverage/branch/summary.json)
 
 The phase-two work builds the NutShell RTL simulator and compares duplicate filtering across repeated experiments. The final report records the observed results, reference-model discrepancies, and the experiment's limitations. Generated binaries, raw coverage files, Python environments, and caches are excluded from Git; source seeds, coverage summaries, and logs are included.
 

@@ -1,0 +1,70 @@
+{
+  "paper_comparison": {
+    "published_new_bugs": 26,
+    "published_cve_assignments": 15,
+    "comparison_note": "The paper tested historical CPU revisions and its own bug corpus; this checkout does not contain those mutants or revisions."
+  },
+  "campaign": {
+    "directory": "evidence\\final\\campaign-20261119-184525",
+    "generated_seeds": 120,
+    "passed_seeds": 120,
+    "failed_seeds": 0,
+    "differential_failures": 0,
+    "confirmed_new_bugs": 0
+  },
+  "directed_triage": {
+    "directory": "evidence\\final\\triage\\20261119-190729",
+    "cases": 4,
+    "passed": 2,
+    "reference_only_disagreements": 1,
+    "dut_discrepancy_candidates": 1,
+    "results": [
+      {
+        "name": "arithmetic",
+        "classification": "passed",
+        "spike_returncode": 0,
+        "rtl_alone_returncode": 0,
+        "rtl_nemu_returncode": 0,
+        "rtl_good_trap": true,
+        "cause": null
+      },
+      {
+        "name": "ebreak",
+        "classification": "reference-only disagreement",
+        "spike_returncode": 0,
+        "rtl_alone_returncode": 0,
+        "rtl_nemu_returncode": 1,
+        "rtl_good_trap": true,
+        "cause": {
+          "right": 2,
+          "wrong": 3
+        }
+      },
+      {
+        "name": "readonly-counter",
+        "classification": "passed",
+        "spike_returncode": 0,
+        "rtl_alone_returncode": 0,
+        "rtl_nemu_returncode": 0,
+        "rtl_good_trap": true,
+        "cause": null
+      },
+      {
+        "name": "odd-pmpcfg",
+        "classification": "DUT discrepancy candidate",
+        "spike_returncode": 0,
+        "rtl_alone_returncode": 1,
+        "rtl_nemu_returncode": 1,
+        "rtl_good_trap": false,
+        "cause": {
+          "right": 2,
+          "wrong": 0
+        }
+      }
+    ]
+  },
+  "interpretation": {
+    "confirmed_new_bugs": 0,
+    "statement": "No new CPU bug is confirmed. One ebreak case is a Spike/NutShell-versus-NEMU reference disagreement; one odd-pmpcfg case is a reproducible NutShell discrepancy candidate requiring specification and RTL review."
+  }
+}

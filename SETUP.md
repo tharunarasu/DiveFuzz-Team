@@ -54,3 +54,17 @@ wsl -d Ubuntu -- bash -c 'source /mnt/f/DiveFuzz/DiveFuzz/scripts/env-f.sh && py
 ```
 
 Raw coverage files are kept locally and omitted from Git. Coverage summaries and test logs are shareable through the team repository.
+
+The completed phase-two extension also measures time-to-coverage and summarizes
+bug-detection outcomes from the recorded evidence:
+
+```bash
+python scripts/analyze-time-to-coverage.py --metric branch --fraction 0.99
+python scripts/analyze-bug-detection.py
+python scripts/create-final-report.py
+```
+
+The time-to-coverage command uses the common 99% NutCore branch-coverage
+threshold because the boot/template path reaches an 80% threshold in the first
+seed. The summaries are written under `evidence/final/time-to-coverage/branch/`
+and `evidence/final/bug-detection/`.

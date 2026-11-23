@@ -1,0 +1,6 @@
+scope,case,classification,spike_returncode,rtl_alone_returncode,rtl_nemu_returncode,rtl_good_trap
+directed,arithmetic,passed,0,0,0,True
+directed,ebreak,reference-only disagreement,0,0,1,True
+directed,readonly-counter,passed,0,0,0,True
+directed,odd-pmpcfg,DUT discrepancy candidate,0,1,1,False
+generated campaign,120 generated seeds,all passed,0,0,0,True

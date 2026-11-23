@@ -27,3 +27,15 @@ evidence/**/*.bloom
 .github-cli/
 evidence/final/**/*.coverage.dat
 tmp/
+
+# Optional local pilots and analysis scratch outputs.
+evidence/final/pilot-*/
+evidence/final/preflight/
+evidence/final/build/tools.log
+evidence/final/time-to-coverage/*.csv
+evidence/final/time-to-coverage/*.json
+!evidence/final/time-to-coverage/branch/
+!evidence/final/time-to-coverage/branch/*.csv
+!evidence/final/time-to-coverage/branch/*.json
+!evidence/final/latest-time-to-coverage.txt
+!evidence/final/latest-bug-detection.txt
